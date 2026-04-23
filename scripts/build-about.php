@@ -402,12 +402,12 @@ $content = <<<HTML
       <div>
         <p class="seramor-about-kicker">Sobre Seramor</p>
         <h1 class="seramor-about-title">SOBRE SERAMOR</h1>
-        <p class="seramor-about-subtitle">Un espacio creado para acompa&ntilde;ar a mujeres en su proceso de sanaci&oacute;n, reconexi&oacute;n y transformaci&oacute;n.</p>
+        <p class="seramor-about-subtitle">Un espacio creado para acompañar a mujeres en su proceso de sanación, reconexión y transformación.</p>
       </div>
       <div class="seramor-about-hero-markers" aria-label="Ejes de Seramor">
-        <div class="seramor-about-hero-marker">sanaci&oacute;n</div>
-        <div class="seramor-about-hero-marker">reconexi&oacute;n</div>
-        <div class="seramor-about-hero-marker">transformaci&oacute;n</div>
+        <div class="seramor-about-hero-marker">sanación</div>
+        <div class="seramor-about-hero-marker">reconexión</div>
+        <div class="seramor-about-hero-marker">transformación</div>
       </div>
     </div>
   </section>
@@ -415,9 +415,9 @@ $content = <<<HTML
   <section class="seramor-about-section alignfull">
     <div class="seramor-about-wrap">
       <p class="seramor-about-kicker">Esencia</p>
-      <h2 class="seramor-about-heading">&iquest;QU&Eacute; ES SERAMOR?</h2>
-      <p class="seramor-about-copy">Seramor es un espacio de transformaci&oacute;n femenina nacido de una necesidad profunda: crear un lugar donde las mujeres puedan volver a s&iacute; mismas, sanar su historia y empezar a construir una vida m&aacute;s libre, consciente y alineada.</p>
-      <p class="seramor-about-copy">A trav&eacute;s de acompa&ntilde;amiento, contenido, pr&aacute;ctica y comunidad, Seramor busca sostener procesos reales de cambio interior, expansi&oacute;n personal y reconexi&oacute;n con la propia verdad.</p>
+      <h2 class="seramor-about-heading">¿QUÉ ES SERAMOR?</h2>
+      <p class="seramor-about-copy">Seramor es un espacio de transformación femenina nacido de una necesidad profunda: crear un lugar donde las mujeres puedan volver a sí mismas, sanar su historia y empezar a construir una vida más libre, consciente y alineada.</p>
+      <p class="seramor-about-copy">A través de acompañamiento, contenido, práctica y comunidad, Seramor busca sostener procesos reales de cambio interior, expansión personal y reconexión con la propia verdad.</p>
     </div>
   </section>
 
@@ -428,9 +428,9 @@ $content = <<<HTML
       </div>
       <div>
         <p class="seramor-about-kicker">Origen</p>
-        <h2 class="seramor-about-heading">C&Oacute;MO NACE SERAMOR</h2>
-        <p class="seramor-about-origin-text">Seramor nace de la experiencia real de querer crear un espacio seguro, bello y profundo para mujeres que est&aacute;n atravesando procesos de cambio, despertar o b&uacute;squeda interior.</p>
-        <p class="seramor-about-origin-text seramor-about-copy">La intenci&oacute;n de este proyecto es reunir herramientas, acompa&ntilde;amiento y espacios que ayuden a cada mujer a volver a s&iacute;, soltar lo que la limita y acercarse a una vida m&aacute;s aut&eacute;ntica.</p>
+        <h2 class="seramor-about-heading">CÓMO NACE SERAMOR</h2>
+        <p class="seramor-about-origin-text">Seramor nace de la experiencia real de querer crear un espacio seguro, bello y profundo para mujeres que están atravesando procesos de cambio, despertar o búsqueda interior.</p>
+        <p class="seramor-about-origin-text seramor-about-copy">La intención de este proyecto es reunir herramientas, acompañamiento y espacios que ayuden a cada mujer a volver a sí, soltar lo que la limita y acercarse a una vida más auténtica.</p>
       </div>
     </div>
   </section>
@@ -438,8 +438,8 @@ $content = <<<HTML
   <section class="seramor-about-section is-white alignfull">
     <div class="seramor-about-wrap">
       <p class="seramor-about-kicker">Recorridos</p>
-      <h2 class="seramor-about-heading">LO QUE ENCONTRAR&Aacute;S EN SERAMOR</h2>
-      <p class="seramor-about-copy">Seramor re&uacute;ne distintas puertas de entrada para acompa&ntilde;ar a cada mujer seg&uacute;n el momento en el que se encuentre.</p>
+      <h2 class="seramor-about-heading">LO QUE ENCONTRARÁS EN SERAMOR</h2>
+      <p class="seramor-about-copy">Seramor reúne distintas puertas de entrada para acompañar a cada mujer según el momento en el que se encuentre.</p>
 
       <div class="seramor-about-card-grid">
         <article class="seramor-about-card">
@@ -450,17 +450,17 @@ $content = <<<HTML
         <article class="seramor-about-card">
           <span class="seramor-about-card-index">02</span>
           <h3>Consejo de Diosas</h3>
-          <p><strong>Biblioteca de transformaci&oacute;n a tu ritmo</strong></p>
+          <p><strong>Biblioteca de transformación a tu ritmo</strong></p>
         </article>
         <article class="seramor-about-card">
           <span class="seramor-about-card-index">03</span>
-          <h3>Pr&aacute;cticas y recursos</h3>
+          <h3>Prácticas y recursos</h3>
           <p><strong>Herramientas para cuerpo y mente</strong></p>
         </article>
         <article class="seramor-about-card">
           <span class="seramor-about-card-index">04</span>
           <h3>Comunidad</h3>
-          <p><strong>Sost&eacute;n y conexi&oacute;n</strong></p>
+          <p><strong>Sostén y conexión</strong></p>
         </article>
       </div>
     </div>
@@ -475,8 +475,8 @@ $content = <<<HTML
           <li class="seramor-about-essence-item">volver a ti</li>
           <li class="seramor-about-essence-item">sanar tu historia</li>
           <li class="seramor-about-essence-item">reconectar con tu cuerpo</li>
-          <li class="seramor-about-essence-item">vivir con m&aacute;s verdad</li>
-          <li class="seramor-about-essence-item">crear una vida m&aacute;s libre</li>
+          <li class="seramor-about-essence-item">vivir con más verdad</li>
+          <li class="seramor-about-essence-item">crear una vida más libre</li>
         </ul>
       </div>
       <div>
@@ -490,7 +490,7 @@ $content = <<<HTML
       <div class="seramor-about-cta-box">
         <p class="seramor-about-kicker">Siguiente paso</p>
         <h2 class="seramor-about-cta-title">Explora el espacio que mejor encaje contigo</h2>
-        <p class="seramor-about-cta-copy">Tanto si buscas un proceso profundo como si prefieres empezar a tu ritmo, dentro de Seramor encontrar&aacute;s una forma de avanzar hacia la vida que deseas.</p>
+        <p class="seramor-about-cta-copy">Tanto si buscas un proceso profundo como si prefieres empezar a tu ritmo, dentro de Seramor encontrarás una forma de avanzar hacia la vida que deseas.</p>
         <div class="seramor-about-cta-actions">
           <a class="seramor-about-btn is-primary" href="$program_url">Ver el programa de 3 meses</a>
           <a class="seramor-about-btn is-secondary" href="$consejo_url">Descubrir Consejo de Diosas</a>

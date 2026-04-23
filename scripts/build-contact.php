@@ -30,7 +30,7 @@ $content = <<<HTML
     <div class="seramor-contact-hero-inner">
       <p class="seramor-contact-eyebrow">Conoce, visita y contacta</p>
       <h1 class="seramor-contact-headline">Estamos a un mensaje de distancia</h1>
-      <p class="seramor-contact-lead">Escr&iacute;benos por el canal que prefieras. Te respondemos personalmente para acompa&ntilde;arte en el siguiente paso, ya sea el Programa, el Consejo de Diosas o una conversaci&oacute;n m&aacute;s &iacute;ntima.</p>
+      <p class="seramor-contact-lead">Escríbenos por el canal que prefieras. Te respondemos personalmente para acompañarte en el siguiente paso, ya sea el Programa, el Consejo de Diosas o una conversación más íntima.</p>
     </div>
   </section>
 
@@ -41,23 +41,23 @@ $content = <<<HTML
         <span class="seramor-channel-icon seramor-channel-icon-wa">$WA_SVG</span>
         <p class="seramor-channel-eyebrow">WhatsApp</p>
         <h3 class="seramor-channel-title">Conversemos al instante</h3>
-        <p class="seramor-channel-text">La forma m&aacute;s r&aacute;pida y c&aacute;lida. Te leemos personalmente y te orientamos sin compromiso.</p>
+        <p class="seramor-channel-text">La forma más rápida y cálida. Te leemos personalmente y te orientamos sin compromiso.</p>
         <a class="seramor-channel-cta seramor-channel-cta-wa" href="https://wa.me/34610210629?text=Hola%20Seramor%2C%20me%20gustar%C3%ADa%20saber%20m%C3%A1s." target="_blank" rel="noopener">Escribir por WhatsApp</a>
       </article>
 
       <article class="seramor-channel-card">
         <span class="seramor-channel-icon seramor-channel-icon-mail">$MAIL_SVG</span>
         <p class="seramor-channel-eyebrow">Correo</p>
-        <h3 class="seramor-channel-title">Escr&iacute;benos un email</h3>
-        <p class="seramor-channel-text">Para colaboraciones, prensa o consultas que merezcan algo m&aacute;s de espacio.</p>
+        <h3 class="seramor-channel-title">Escríbenos un email</h3>
+        <p class="seramor-channel-text">Para colaboraciones, prensa o consultas que merezcan algo más de espacio.</p>
         <a class="seramor-channel-cta" href="mailto:info@seramor-circle.com">info@seramor-circle.com</a>
       </article>
 
       <article class="seramor-channel-card">
         <span class="seramor-channel-icon seramor-channel-icon-ig">$IG_SVG</span>
         <p class="seramor-channel-eyebrow">Instagram</p>
-        <h3 class="seramor-channel-title">Acomp&aacute;&ntilde;anos en el d&iacute;a a d&iacute;a</h3>
-        <p class="seramor-channel-text">Inspiraci&oacute;n, talleres y momentos del C&iacute;rculo en nuestro perfil.</p>
+        <h3 class="seramor-channel-title">Acompáñanos en el día a día</h3>
+        <p class="seramor-channel-text">Inspiración, talleres y momentos del Círculo en nuestro perfil.</p>
         <a class="seramor-channel-cta" href="https://instagram.com/helena.seramor" target="_blank" rel="noopener">@helena.seramor</a>
       </article>
 
@@ -68,11 +68,11 @@ $content = <<<HTML
     <div class="seramor-contact-tips-inner">
       <div class="seramor-contact-tips-copy">
         <p class="seramor-contact-eyebrow">Antes de escribir</p>
-        <h2 class="seramor-contact-subheadline">Cuanto m&aacute;s contexto nos des, mejor te acompa&ntilde;amos</h2>
+        <h2 class="seramor-contact-subheadline">Cuanto más contexto nos des, mejor te acompañamos</h2>
         <ul class="seramor-contact-tips-list">
-          <li>Qu&eacute; espacio te interesa: mentor&iacute;a 1:1, Programa o Consejo de Diosas.</li>
-          <li>En qu&eacute; momento est&aacute;s ahora mismo.</li>
-          <li>Qu&eacute; cambio te gustar&iacute;a sostener en los pr&oacute;ximos meses.</li>
+          <li>Qué espacio te interesa: mentoría 1:1, Programa o Consejo de Diosas.</li>
+          <li>En qué momento estás ahora mismo.</li>
+          <li>Qué cambio te gustaría sostener en los próximos meses.</li>
         </ul>
       </div>
       <div class="seramor-contact-tips-image"><img class="wp-image-$HEL_ID" src="$HEL" alt="Helena de Seramor"/></div>

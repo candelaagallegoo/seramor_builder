@@ -53,16 +53,16 @@ $content = <<<GUTENBERG
 <!-- wp:html -->
 <section class="seramor-hero alignfull" style="margin-left:calc(50% - 50vw);width:100vw;background-image:linear-gradient(rgba(58,38,20,0.2),rgba(58,38,20,0.2)),url('$HERO');background-size:cover;background-position:center;min-height:100vh;display:flex;flex-direction:column">
   <nav class="seramor-topnav">
-    <a href="#hero">UNETE AQUI</a>
+    <a href="#hero">ÚNETE AQUÍ</a>
     <a href="/?page_id=17">PROGRAMA "MUJERES PODEROSAS"</a>
     <a href="/consejo-de-diosas">CONSEJO DE DIOSAS</a>
     <a href="/?page_id=20">SOBRE SERAMOR</a>
-    <a href="/wp-login.php">INICIA SESION</a>
+    <a href="/wp-login.php">INICIA SESIÓN</a>
   </nav>
   <div class="seramor-hero-body" style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px;text-align:center">
     <div class="seramor-hero-logo"><img src="$LOGO" alt="Seramor" style="width:360px;height:auto;display:block;margin:0 auto"/></div>
-    <p style="color:$CREAM;font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:4.5px;text-transform:uppercase;margin:30px 0 0">Circulo de mujeres online</p>
-    <p style="color:$CREAM;font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.75;max-width:600px;margin:24px auto 0">Un espacio para mujeres que estan listas para sanar en profundidad,<br/>reconectar consigo mismas y empezar a crear una vida mas libre.</p>
+    <p style="color:$CREAM;font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:4.5px;text-transform:uppercase;margin:30px 0 0">Círculo de mujeres online</p>
+    <p style="color:$CREAM;font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.75;max-width:600px;margin:24px auto 0">Un espacio para mujeres que están listas para sanar en profundidad,<br/>reconectar consigo mismas y empezar a crear una vida más libre.</p>
     <a href="/?page_id=17" class="seramor-hero-cta" style="display:inline-block;margin-top:38px;padding:14px 38px;background:$WINE;color:$CREAM;text-decoration:none;font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;border-radius:999px">Descubrir el programa</a>
   </div>
 </section>
@@ -89,7 +89,7 @@ $content = <<<GUTENBERG
   <div class="seramor-tile">
     <img src="$CRE" alt="Crecer"/>
     <div class="tile-text">
-      <p class="tile-eyebrow">Florece desde tu raiz</p>
+      <p class="tile-eyebrow">Florece desde tu raíz</p>
       <h3 class="tile-title">Crecer</h3>
     </div>
   </div>
@@ -102,7 +102,7 @@ $content = <<<GUTENBERG
 <section class="seramor-helena alignfull" style="margin-left:calc(50% - 50vw);width:100vw">
   <div class="seramor-helena-grid">
     <div>
-      <p class="seramor-helena-text">Me llamo Helena, soy facilitadora de circulos de mujeres, titulada como profesora de yoga y apasionada por crear espacios de conexion y sanacion. Desde muy joven, los circulos de mujeres transformaron mi vida, y hoy Seramor nace de ese deseo de ofrecer a otras mujeres un espacio seguro donde expresarse, compartir y sanar en comunidad.</p>
+      <p class="seramor-helena-text">Me llamo Helena, soy facilitadora de círculos de mujeres, titulada como profesora de yoga y apasionada por crear espacios de conexión y sanación. Desde muy joven, los círculos de mujeres transformaron mi vida, y hoy Seramor nace de ese deseo de ofrecer a otras mujeres un espacio seguro donde expresarse, compartir y sanar en comunidad.</p>
       <a class="seramor-helena-cta" href="/?page_id=20">Conocer Seramor &gt;</a>
     </div>
     <div>
@@ -122,13 +122,13 @@ $content = <<<GUTENBERG
   <div class="seramor-rock-inner">
     <div class="seramor-cards">
       <a class="seramor-card" href="/mentorias">
-        <h4 class="card-title">Mentorias 1-1</h4>
-        <p class="card-sub">Acompanamiento personalizado para tu proceso individual.</p>
-        <span class="card-link">Reservar mentoria</span>
+        <h4 class="card-title">Mentorías 1:1</h4>
+        <p class="card-sub">Acompañamiento personalizado para tu proceso individual.</p>
+        <span class="card-link">Reservar mentoría</span>
       </a>
       <a class="seramor-card center" href="/?page_id=17">
         <h4 class="card-title">Programa 3 Meses<br/>Mujeres Poderosas</h4>
-        <p class="card-sub">Acompanamiento profundo en grupo para sanar, transformarte y crear una nueva realidad.</p>
+        <p class="card-sub">Acompañamiento profundo en grupo para sanar, transformarte y crear una nueva realidad.</p>
         <span class="card-btn">Unirme</span>
       </a>
       <a class="seramor-card" href="/consejo-de-diosas">
@@ -138,11 +138,11 @@ $content = <<<GUTENBERG
       </a>
     </div>
     <div class="seramor-rock-quees">
-      <h2 class="seramor-quees-title">&iquest;Que es Seramor?</h2>
-      <p class="seramor-quees-text">Seramor es un circulo de mujeres online nacido de una necesidad profunda: crear el espacio que muchas veces nos falta para sanar, crecer y sostenernos entre nosotras.</p>
-      <p class="seramor-quees-text">A traves de un programa estructurado de 3 meses y un grupo cerrado, recorremos juntas un proceso de transformacion para romper tus creencias limitantes y dar pasos reales hacia una vida mas libre y alineada.</p>
-      <p class="seramor-quees-text">En comunidad, con otras 6 mujeres de todo el mundo, trabajaremos con nuestra nina interior, recuperando cualidades esenciales como la creatividad, la intuicion y la calma.</p>
-      <a class="seramor-quees-link" href="/?page_id=17">Mas info &gt;</a>
+      <h2 class="seramor-quees-title">¿Qué es Seramor?</h2>
+      <p class="seramor-quees-text">Seramor es un círculo de mujeres online nacido de una necesidad profunda: crear el espacio que muchas veces nos falta para sanar, crecer y sostenernos entre nosotras.</p>
+      <p class="seramor-quees-text">A través de un programa estructurado de 3 meses y un grupo cerrado, recorremos juntas un proceso de transformación para romper tus creencias limitantes y dar pasos reales hacia una vida más libre y alineada.</p>
+      <p class="seramor-quees-text">En comunidad, con otras 6 mujeres de todo el mundo, trabajaremos con nuestra niña interior, recuperando cualidades esenciales como la creatividad, la intuición y la calma.</p>
+      <a class="seramor-quees-link" href="/?page_id=17">Más info &gt;</a>
     </div>
   </div>
 </section>

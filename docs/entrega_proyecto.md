@@ -630,12 +630,12 @@ flowchart LR
 #### 4.5.1 Organización en dos repositorios
 
 El proyecto está dividido en **dos repositorios independientes**, alojados
-en GitHub bajo la cuenta `manupadillaph`:
+en GitHub bajo la cuenta `candelaagallegoo`:
 
 | Repositorio | URL | Ruta local | Función |
 |-------------|-----|------------|---------|
-| **Builder** | https://github.com/manupadillaph/seramor_builder | `C:\Users\cande\Desktop\PROGRAMACION\WEBSITE_BUILDER_WORKSPACE` | Scripts de construcción, planes, documentación (incluye este TFG) |
-| **Website** | https://github.com/manupadillaph/serarmor_website | `C:\xampp\htdocs\seramor` | Instalación WordPress completa que se despliega al servidor |
+| **Builder** | https://github.com/candelaagallegoo/seramor_builder | `C:\Users\cande\Desktop\PROGRAMACION\WEBSITE_BUILDER_WORKSPACE` | Scripts de construcción, planes, documentación (incluye este TFG) |
+| **Website** | https://github.com/candelaagallegoo/serarmor_website | `C:\xampp\htdocs\seramor` | Instalación WordPress completa que se despliega al servidor |
 
 Esta separación responde a un principio de **separación de
 responsabilidades**: el código que *genera* el sitio no se mezcla con la
@@ -929,7 +929,7 @@ de construcción (*builder*) con la aplicación WordPress final.
 
 #### Repositorio 1 — Builder (este documento vive aquí)
 
-- **GitHub remoto:** https://github.com/manupadillaph/seramor_builder
+- **GitHub remoto:** https://github.com/candelaagallegoo/seramor_builder
 - **Ruta local:** `C:\Users\cande\Desktop\PROGRAMACION\WEBSITE_BUILDER_WORKSPACE`
 - **Contenido:** scripts PHP/PowerShell que construyen las páginas,
   configuran Astra y PMPro, suben imágenes y arrancan el listener de
@@ -970,7 +970,7 @@ backups/
 
 #### Repositorio 2 — Website (instalación WordPress)
 
-- **GitHub remoto:** https://github.com/manupadillaph/serarmor_website
+- **GitHub remoto:** https://github.com/candelaagallegoo/serarmor_website
 - **Ruta local:** `C:\xampp\htdocs\seramor`
 - **Contenido:** instalación completa de WordPress 6.9.4, tema Astra,
   plugins (PMPro, Stripe), el *mu-plugin* propio `seramor-site-runtime.php` y
@@ -1067,13 +1067,13 @@ tar -czf .\backups\seramor-app.tar.gz `
 ### 8.3 Anexo de planificación
 
 - Plan maestro con fases, IDs de páginas y estado real:
-  https://github.com/manupadillaph/seramor_builder/blob/main/docs/plans/plan-maestro.md
+  https://github.com/candelaagallegoo/seramor_builder/blob/main/docs/plans/plan-maestro.md
 - DER detallado en Mermaid:
-  https://github.com/manupadillaph/seramor_builder/blob/main/docs/der-seramor-mermaid.md
+  https://github.com/candelaagallegoo/seramor_builder/blob/main/docs/der-seramor-mermaid.md
 - Documento de integración Stripe local y server:
-  https://github.com/manupadillaph/seramor_builder/blob/main/docs/stripe-local-y-server.md
+  https://github.com/candelaagallegoo/seramor_builder/blob/main/docs/stripe-local-y-server.md
 - Documento de integraciones (claves y webhooks):
-  https://github.com/manupadillaph/seramor_builder/blob/main/docs/integraciones.md
+  https://github.com/candelaagallegoo/seramor_builder/blob/main/docs/integraciones.md
 
 ### 8.4 Anexo de comandos clave
 

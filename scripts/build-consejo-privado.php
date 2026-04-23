@@ -47,7 +47,7 @@ $video_map = array(
   ),
   'sanacion-y-reconexion' => array(
     'youtube_id' => 'LquA2nbz91A',
-    'title'      => 'Clase privada de sanacion y reconexion',
+    'title'      => 'Clase privada de sanación y reconexión',
   ),
   'vida-libre' => array(
     'youtube_id' => 'zeIkjdHC2sQ',
@@ -55,11 +55,11 @@ $video_map = array(
   ),
   'practicas-para-cuidarte' => array(
     'youtube_id' => 'lxanPmuHpgo',
-    'title'      => 'Practica guiada para cuidarte',
+    'title'      => 'Práctica guiada para cuidarte',
   ),
   'sabiduria-y-recursos' => array(
     'youtube_id' => '6p4GrWF1sGQ',
-    'title'      => 'Biblioteca viva de sabiduria y recursos',
+    'title'      => 'Biblioteca viva de sabiduría y recursos',
   ),
 );
 
@@ -119,12 +119,12 @@ function seramor_build_lesson_content( $title, $kicker, $summary, $focus_points,
     $embed_url   = 'https://www.youtube-nocookie.com/embed/' . rawurlencode( $video['youtube_id'] ) . '?rel=0';
     $video_title = ! empty( $video['title'] ) ? $video['title'] : $title;
     $video_markup = '<div class="seramor-video-shell is-live"><div class="seramor-youtube-frame"><iframe src="' . esc_url( $embed_url ) . '" title="' . esc_attr( $video_title ) . '" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></div>';
-    $video_copy   = esc_html( 'Este modulo ya tiene su video incrustado desde YouTube para que puedas reproducirlo dentro del area privada sin salir del sitio.' );
-    $resource_copy = esc_html( 'Debajo del video puedes sumar PDF, journaling, audios o notas privadas. El embed ya esta listo; solo queda complementar cada modulo con recursos descargables.' );
+    $video_copy   = esc_html( 'Este módulo ya tiene su video incrustado desde YouTube para que puedas reproducirlo dentro del área privada sin salir del sitio.' );
+    $resource_copy = esc_html( 'Debajo del video puedes sumar PDF, journaling, audios o notas privadas. El embed ya está listo; solo queda complementar cada módulo con recursos descargables.' );
   } else {
-    $video_markup = '<div class="seramor-video-shell"><div class="seramor-video-placeholder"><span>Este modulo se apoya en recursos vivos, notas y encuentros. Puedes seguir ampliandolo desde el canal privado de Seramor.</span></div></div>';
-    $video_copy   = esc_html( 'Este espacio puede crecer con recursos, eventos y materiales de integracion aunque no dependa de un video central.' );
-    $resource_copy = esc_html( 'Usalo para plantillas, enlaces, notas de clase o el calendario de encuentros del Consejo.' );
+    $video_markup = '<div class="seramor-video-shell"><div class="seramor-video-placeholder"><span>Este módulo se apoya en recursos vivos, notas y encuentros. Puedes seguir ampliándolo desde el canal privado de Seramor.</span></div></div>';
+    $video_copy   = esc_html( 'Este espacio puede crecer con recursos, eventos y materiales de integración aunque no dependa de un video central.' );
+    $resource_copy = esc_html( 'Úsalo para plantillas, enlaces, notas de clase o el calendario de encuentros del Consejo.' );
   }
 
   $channel_cta = '';
@@ -160,7 +160,7 @@ function seramor_build_lesson_content( $title, $kicker, $summary, $focus_points,
     <div class="seramor-section-inner seramor-grid-2 is-reversed">
       <div>
         <p class="seramor-kicker">Enfoque de esta parte</p>
-        <h2 class="seramor-title">Lo que vas a trabajar aqui</h2>
+        <h2 class="seramor-title">Lo que vas a trabajar aquí</h2>
         <ul class="seramor-list">$items</ul>
       </div>
       <div class="seramor-login-panel">
@@ -177,49 +177,49 @@ HTML;
 
 $sections = array(
     'empieza-por-aqui' => array(
-    'title'        => 'Empieza por aqui',
+  'title'        => 'Empieza por aquí',
         'kicker'       => 'Tu puerta de entrada',
-    'summary'      => 'Una guia para orientarte dentro del Consejo, entender el recorrido y elegir por donde empezar segun tu momento actual.',
+  'summary'      => 'Una guía para orientarte dentro del Consejo, entender el recorrido y elegir por dónde empezar según tu momento actual.',
         'focus_points' => array(
-            'Como usar la biblioteca sin abrumarte.',
-            'Que recorrer primero segun tu momento vital.',
-            'Como combinar videos, practicas y journaling.',
+      'Cómo usar la biblioteca sin abrumarte.',
+      'Qué recorrer primero según tu momento vital.',
+      'Cómo combinar videos, prácticas y journaling.',
         ),
     ),
     'sanacion-y-reconexion' => array(
-    'title'        => 'Sanacion y reconexion femenina',
+  'title'        => 'Sanación y reconexión femenina',
         'kicker'       => 'Volver a ti',
-    'summary'      => 'Sesiones para sanar heridas, reconocer patrones y volver al cuerpo con mas verdad y suavidad.',
+  'summary'      => 'Sesiones para sanar heridas, reconocer patrones y volver al cuerpo con más verdad y suavidad.',
         'focus_points' => array(
-            'Nina interior, cuerpo e historia emocional.',
+      'Niña interior, cuerpo e historia emocional.',
             'Creencias limitantes y formas de reescribirlas.',
-      'Sexualidad, ciclo y reconexion con tu energia femenina.',
+    'Sexualidad, ciclo y reconexión con tu energía femenina.',
         ),
     ),
     'vida-libre' => array(
         'title'        => 'Crea una vida libre',
-      'kicker'       => 'Expansion',
-      'summary'      => 'Masterclasses y guias para pasar de la intuicion a decisiones concretas que sostengan una vida mas alineada contigo.',
+    'kicker'       => 'Expansión',
+    'summary'      => 'Masterclasses y guías para pasar de la intuición a decisiones concretas que sostengan una vida más alineada contigo.',
         'focus_points' => array(
-            'Deseo, direccion y claridad vital.',
+      'Deseo, dirección y claridad vital.',
             'Dinero, abundancia y trabajo con el merecimiento.',
-        'Negocio online, visibilidad y estructura practica.',
+    'Negocio online, visibilidad y estructura práctica.',
         ),
     ),
     'practicas-para-cuidarte' => array(
         'title'        => 'Para cuidarte',
-      'kicker'       => 'Practicas',
-      'summary'      => 'Meditaciones, yoga ciclica y ejercicios sencillos para regularte y volver al presente en el dia a dia.',
+    'kicker'       => 'Prácticas',
+    'summary'      => 'Meditaciones, yoga cíclica y ejercicios sencillos para regularte y volver al presente en el día a día.',
         'focus_points' => array(
             'Meditaciones cortas para volver a tu centro.',
-            'Practicas corporales para sostenerte mejor.',
-        'Rituales cotidianos para cuidar tu energia.',
+      'Prácticas corporales para sostenerte mejor.',
+    'Rituales cotidianos para cuidar tu energía.',
         ),
     ),
     'sabiduria-y-recursos' => array(
-      'title'        => 'Biblioteca de sabiduria y recursos practicos',
-      'kicker'       => 'Sabiduria',
-      'summary'      => 'Libros, remedios, materiales y referencias para profundizar a tu ritmo y con autonomia.',
+    'title'        => 'Biblioteca de sabiduría y recursos prácticos',
+    'kicker'       => 'Sabiduría',
+    'summary'      => 'Libros, remedios, materiales y referencias para profundizar a tu ritmo y con autonomía.',
         'focus_points' => array(
             'Libros y referencias para ampliar mirada.',
             'Recursos de salud femenina y autocuidado.',
@@ -227,12 +227,12 @@ $sections = array(
         ),
     ),
     'cuaderno-e-integracion' => array(
-      'title'        => 'Cuaderno e integracion',
+    'title'        => 'Cuaderno e integración',
       'kicker'       => 'Bajar a tierra',
-      'summary'      => 'Plantillas, preguntas y espacios de integracion para que el proceso no se quede solo en inspiracion.',
+    'summary'      => 'Plantillas, preguntas y espacios de integración para que el proceso no se quede solo en inspiración.',
         'focus_points' => array(
             'Journaling para sostener lo que emerge.',
-            'Plantillas para ordenar ritmos y habitos.',
+      'Plantillas para ordenar ritmos y hábitos.',
         'Cierres e integraciones para cada etapa.',
         ),
     ),
@@ -300,7 +300,7 @@ $cards = '';
 foreach ( $child_pages as $slug => $child_page ) {
     $section = $sections[ $slug ];
     $cards  .= '<a class="seramor-private-card" href="__HOME__/?page_id=' . $child_page['id'] . '">';
-    $cards  .= '<span class="seramor-private-card-tag">Modulo privado</span>';
+  $cards  .= '<span class="seramor-private-card-tag">Módulo privado</span>';
     $cards  .= '<h3>' . esc_html( $child_page['title'] ) . '</h3>';
     $cards  .= '<p>' . esc_html( $section['summary'] ) . '</p>';
     $cards  .= '<span class="seramor-private-card-link">Entrar al contenido</span>';
@@ -312,13 +312,13 @@ $library_content = <<<HTML
 <div class="seramor-shell seramor-private-library">
   <section class="seramor-membership-hero seramor-private-hero">
     <div class="seramor-membership-copy">
-      <p class="seramor-kicker">Area privada</p>
+      <p class="seramor-kicker">Área privada</p>
       <h1 class="seramor-title">Biblioteca Consejo de Diosas</h1>
-      <p class="seramor-text">Aqui esta la version privada del Consejo: una biblioteca viva con clases, practicas, recursos y espacios de integracion para recorrer a tu ritmo.</p>
+      <p class="seramor-text">Aquí está la versión privada del Consejo: una biblioteca viva con clases, prácticas, recursos y espacios de integración para recorrer a tu ritmo.</p>
       <div class="seramor-pill-row">
         <span class="seramor-pill">Videos incrustados</span>
         <span class="seramor-pill">Thumbnails propios</span>
-        <span class="seramor-pill">Acceso solo miembros</span>
+        <span class="seramor-pill">Acceso solo para miembros</span>
       </div>
     </div>
   </section>
@@ -326,10 +326,10 @@ $library_content = <<<HTML
   <section class="seramor-section seramor-soft">
     <div class="seramor-section-inner seramor-grid-2 is-reversed">
       <div>
-        <p class="seramor-kicker">Como funciona</p>
-        <h2 class="seramor-title">Una publica para vender y una privada para consumir</h2>
-        <p class="seramor-text" style="margin-top:22px">La pagina publica presenta el Consejo, muestra contenido borroso y lleva al checkout o al login. Esta pagina privada es la biblioteca real: aqui cada modulo puede llevar su thumbnail, su embed de YouTube y sus recursos descargables.</p>
-        <p class="seramor-text" style="margin-top:18px">Para cada leccion, lo mas limpio es: thumbnail en WordPress para la tarjeta + video oculto en YouTube incrustado dentro de la pagina del modulo.</p>
+        <p class="seramor-kicker">Cómo funciona</p>
+        <h2 class="seramor-title">Una pública para vender y una privada para consumir</h2>
+        <p class="seramor-text" style="margin-top:22px">La página pública presenta el Consejo, muestra contenido borroso y lleva al checkout o al login. Esta página privada es la biblioteca real: aquí cada módulo puede llevar su thumbnail, su embed de YouTube y sus recursos descargables.</p>
+        <p class="seramor-text" style="margin-top:18px">Para cada lección, lo más limpio es: thumbnail en WordPress para la tarjeta + video oculto en YouTube incrustado dentro de la página del módulo.</p>
       </div>
       <div class="seramor-image-card"><img class="wp-image-$HERO_ID" src="$HERO" alt="Biblioteca privada Consejo de Diosas"/></div>
     </div>
@@ -339,7 +339,7 @@ $library_content = <<<HTML
     <div class="seramor-section-inner">
       <p class="seramor-kicker">Biblioteca</p>
       <h2 class="seramor-title">Tus espacios dentro del Consejo</h2>
-      <p class="seramor-text" style="max-width:760px;margin:18px auto 0;text-align:center">Las clases principales ya quedan incrustadas dentro de los modulos privados. Los espacios de integracion y encuentros siguen creciendo contigo dentro de la membresia.</p>
+      <p class="seramor-text" style="max-width:760px;margin:18px auto 0;text-align:center">Las clases principales ya quedan incrustadas dentro de los módulos privados. Los espacios de integración y encuentros siguen creciendo contigo dentro de la membresía.</p>
       <div class="seramor-private-grid">$cards</div>
       <div class="seramor-cta-row" style="justify-content:center;margin-top:26px">
         <a class="seramor-btn is-secondary" href="$channel_url" target="_blank" rel="noopener">Abrir canal base en YouTube</a>

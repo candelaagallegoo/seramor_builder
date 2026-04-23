@@ -535,7 +535,7 @@ $content = <<<HTML
     <div class="seramor-program-hero-bg"><img class="wp-image-$HERO_ID" src="$HERO" alt="Programa de 3 meses"/></div>
     <nav class="seramor-topnav" style="position:relative;z-index:2">
       <a href="$register_url">REGÍSTRATE</a>
-      <a href="__HOME__/?page_id=17">PROGRAMA &quot;MUJERES PODEROSAS&quot;</a>
+      <a href="__HOME__/?page_id=17">PROGRAMA “MUJERES PODEROSAS”</a>
       <a href="$consejo_url">CONSEJO DE DIOSAS</a>
       <a href="$about_url">SOBRE SERAMOR</a>
       <a href="$login_url">INICIA SESIÓN</a>
