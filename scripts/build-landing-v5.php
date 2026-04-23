@@ -3,30 +3,43 @@
  * Build Landing Page (ID 10) - Seramor - V5
  * Imagenes del Canva real (extraidas del SVG y reimportadas como canva-img_*).
  * Tarjetas de servicios CLICABLES (envueltas en <a>).
- * Estilos en mu-plugin (seramor-fonts.php).
+ * Estilos en mu-plugin (seramor-site-runtime.php).
  *
  * Run: c:\xampp\php\php.exe wp-cli.phar eval-file scripts/build-landing-v5.php
  *      --path="c:\xampp\htdocs\seramor"
  */
 
-// Logo (subido manualmente, transparente)
-$LOGO  = 'http://localhost/seramor/wp-content/uploads/2026/04/Logo-1.png';
+// PORTABILIDAD: resolvemos URLs en runtime usando WP, asi funcionan en local Y en server.
+// IDs de attachments (subidos previamente).
 $LOGO_ID = 102;
+$HERO_ID = 105;
+$SOL_ID  = 106;
+$CON_ID  = 107;
+$CRE_ID  = 109;
+$HEL_ID  = 110;
+$ROCK_ID = 111;
 
-// Fotos del Canva real
-$BASE  = 'http://localhost/seramor/wp-content/uploads/2026/04/';
-$HERO  = $BASE . 'img_23_x0_y0_w2700.jpeg';      // ID 105 - cenote
-$SOL   = $BASE . 'img_30_x0_y0_w1184.jpeg';      // ID 106 - cueva pequena
-$CON   = $BASE . 'img_31_x0_y0_w1776.jpeg';      // ID 107 - closeup pelirroja
-$CRE   = $BASE . 'img_32_x0_y0_w1184.jpeg';      // ID 109 - vestido ocre
-$HEL   = $BASE . 'img_33_x0_y0_w2042.jpeg';      // ID 110 - sonriendo coco
-$ROCK  = $BASE . 'img_36_x0_y0_w1184.jpeg';      // ID 111 - cueva con figura
+$LOGO = wp_get_attachment_url( $LOGO_ID );
+$HERO = wp_get_attachment_url( $HERO_ID );
+$SOL  = wp_get_attachment_url( $SOL_ID );
+$CON  = wp_get_attachment_url( $CON_ID );
+$CRE  = wp_get_attachment_url( $CRE_ID );
+$HEL  = wp_get_attachment_url( $HEL_ID );
+$ROCK = wp_get_attachment_url( $ROCK_ID );
 
-// Testimonios (mantienen fotos previas)
+// Testimonios (fotos sueltas en uploads sin attachment ID conocido) -> content_url respeta WP_CONTENT_URL.
+$BASE = content_url( '/uploads/2026/04/' );
 $T1 = $BASE . 'C6EFFA22-F030-4ACC-89F4-8B795D2C9D2D.jpg';
 $T2 = $BASE . 'C6BA6D6F-8119-48B7-8FC7-0EE4542CEB1E.jpg';
 $T3 = $BASE . 'B1C18F87-5B61-49BF-8743-8D86649C8738.jpg';
 $T4 = $BASE . '9F204147-27F2-4468-BE52-651149E43481.jpg';
+
+// Validacion temprana: si algun ID falta, abortar.
+foreach ( [ 'LOGO' => $LOGO, 'HERO' => $HERO, 'SOL' => $SOL, 'CON' => $CON, 'CRE' => $CRE, 'HEL' => $HEL, 'ROCK' => $ROCK ] as $k => $v ) {
+    if ( empty( $v ) ) {
+        WP_CLI::error( "Attachment $k no encontrado. Revisar IDs." );
+    }
+}
 
 $WINE  = '#743014';
 $DARK  = '#3a2614';
@@ -37,55 +50,23 @@ $BONE  = '#f2ede6';
 $content = <<<GUTENBERG
 
 <!-- ============== SECCION 1 - HERO ============== -->
-<!-- wp:cover {"url":"$HERO","id":105,"dimRatio":20,"customOverlayColor":"$DARK","minHeight":100,"minHeightUnit":"vh","align":"full","className":"seramor-hero"} -->
-<div class="wp-block-cover alignfull has-background-dim seramor-hero" style="min-height:100vh"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-20 has-background-dim" style="background-color:$DARK"></span><img class="wp-block-cover__image-background wp-image-105" alt="Helena en cenote" src="$HERO" style="object-fit:cover" data-object-fit="cover"/><div class="wp-block-cover__inner-container">
-
 <!-- wp:html -->
-<nav class="seramor-topnav">
-  <a href="#hero">UNETE AQUI</a>
-  <a href="/?page_id=17">PROGRAMA "MUJERES PODEROSAS"</a>
-  <a href="/consejo-de-diosas">CONSEJO DE DIOSAS</a>
-  <a href="/?page_id=20">SOBRE SERAMOR</a>
-  <a href="/wp-login.php">INICIA SESION</a>
-</nav>
+<section class="seramor-hero alignfull" style="margin-left:calc(50% - 50vw);width:100vw;background-image:linear-gradient(rgba(58,38,20,0.2),rgba(58,38,20,0.2)),url('$HERO');background-size:cover;background-position:center;min-height:100vh;display:flex;flex-direction:column">
+  <nav class="seramor-topnav">
+    <a href="#hero">UNETE AQUI</a>
+    <a href="/?page_id=17">PROGRAMA "MUJERES PODEROSAS"</a>
+    <a href="/consejo-de-diosas">CONSEJO DE DIOSAS</a>
+    <a href="/?page_id=20">SOBRE SERAMOR</a>
+    <a href="/wp-login.php">INICIA SESION</a>
+  </nav>
+  <div class="seramor-hero-body" style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px;text-align:center">
+    <div class="seramor-hero-logo"><img src="$LOGO" alt="Seramor" style="width:360px;height:auto;display:block;margin:0 auto"/></div>
+    <p style="color:$CREAM;font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:4.5px;text-transform:uppercase;margin:30px 0 0">Circulo de mujeres online</p>
+    <p style="color:$CREAM;font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.75;max-width:600px;margin:24px auto 0">Un espacio para mujeres que estan listas para sanar en profundidad,<br/>reconectar consigo mismas y empezar a crear una vida mas libre.</p>
+    <a href="/?page_id=17" class="seramor-hero-cta" style="display:inline-block;margin-top:38px;padding:14px 38px;background:$WINE;color:$CREAM;text-decoration:none;font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;border-radius:999px">Descubrir el programa</a>
+  </div>
+</section>
 <!-- /wp:html -->
-
-<!-- wp:spacer {"height":"130px"} -->
-<div style="height:130px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:image {"id":102,"width":"360px","sizeSlug":"full","align":"center","className":"seramor-hero-logo"} -->
-<figure class="wp-block-image aligncenter size-full is-resized seramor-hero-logo"><img src="$LOGO" alt="Seramor" class="wp-image-102" style="width:360px;height:auto"/></figure>
-<!-- /wp:image -->
-
-<!-- wp:spacer {"height":"30px"} -->
-<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center" style="color:$CREAM;font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:4.5px;text-transform:uppercase;margin:0">Circulo de mujeres online</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:spacer {"height":"24px"} -->
-<div style="height:24px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center" style="color:$CREAM;font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.75;max-width:600px;margin:0 auto">Un espacio para mujeres que estan listas para sanar en profundidad,<br/>reconectar consigo mismas y empezar a crear una vida mas libre.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:spacer {"height":"38px"} -->
-<div style="height:38px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"className":"seramor-btn-pill"} -->
-<div class="wp-block-buttons seramor-btn-pill"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/?page_id=17">Descubrir el programa</a></div>
-<!-- /wp:button --></div>
-<!-- /wp:buttons -->
-
-</div></div>
-<!-- /wp:cover -->
 
 
 <!-- ============== SECCION 2 - SOLTAR / CONECTAR / CRECER ============== -->

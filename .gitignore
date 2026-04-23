@@ -3,6 +3,14 @@ imagenes/canvas/
 imagenes/screenshots/
 imagenes/thumbs/
 scripts/upload-log.txt
+certs/
+local-certs/
+local-dev/certs/
+localhost+*.pem
+localhost+*-key.pem
+rootCA.pem
+rootCA-key.pem
+*.pfx
 *.mp4
 *.mov
 *.avi
@@ -13,3 +21,4 @@ Thumbs.db
 .DS_Store
 docs/accesos.md
 docs/deploy.md
+docs/integraciones.md

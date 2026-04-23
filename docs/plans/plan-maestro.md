@@ -1,151 +1,90 @@
 # PLAN MAESTRO — Website Seramor (WordPress + Gutenberg)
 
-## Referencias de diseño
-- **ESTILO VISUAL → Canva** (imagenes/screenshots/canva-01..05.png) = FUENTE PRINCIPAL
-- **Contenido/Estructura → Notion** (briefings, textos, arquitectura)
-- **Referencia secundaria → seramor-circle.com** (solo para estructura/contenido, NO estilo)
+## Referencias activas
+- Estilo visual: Canva dentro de imagenes/canvas/latest
+- Contenido y arquitectura: Notion + definiciones de la sesión
+- Base técnica: WordPress 6.9.4 + Astra 4.12.6 + mu-plugin propio
 
-## Estilo visual extraído de Canva
-- **Paleta:** Verde bosque oscuro (#37432b), dorado cálido (#fce8a4), marron oscuro (#733015), blanco
-- **Tipografía títulos:** Sans-serif uppercase con tracking amplio ("SERAMOR", "SORCHA CIRCLE")
-- **Tipografía énfasis:** Script/cursiva italic para palabras clave ("Emprendedoras")
-- **Tipografía cuerpo:** Serif elegante, claro sobre fondo oscuro
-- **Fondos:** Fotos de naturaleza full-bleed (cenote, bosque, agua) con overlay oscuro
-- **Logo principal:** Laberinto dorado circular (Sorcha Circle) + Mujer meditando con espiral (Seramor)
-- **Botones:** Borde blanco/dorado redondeado, texto uppercase
-- **Layout:** Hero full-width, secciones alternando verde oscuro / crema / imagen
-- **Sensación:** Premium, orgánico, espiritual, terrenal, sofisticado
+## Estado real del proyecto
+- Landing v6 publicada en la página 10 con footer nuevo, links portables por __HOME__ y media resuelta por wp-image-ID.
+- Fixes globales ya aplicados: color primario Astra forzado a wine, fondo interior corregido a bone, header global wine, footer global dark.
+- Portabilidad ya resuelta en runtime desde el mu-plugin:
+  - Imágenes reescritas por class wp-image-N
+  - Links internos reescritos desde __HOME__
+- Stripe decidido: integración vía Paid Memberships Pro + Stripe API keys de test recibidas en docs/integraciones.md.
+- Bloques públicos en curso: Programa 3 meses y Consejo de Diosas.
 
----
+## Fase 0 — Infraestructura
+- [x] Elementor desactivado
+- [x] IDs principales identificados
+- [x] Astra configurado v2 con paleta correcta
+- [x] Mu-plugin cargado para tipografías, overrides y portabilidad
+- [x] Landing responsive con assets portables
+- [ ] PMPro instalado y configurado
+- [ ] Stripe test conectado al checkout real
 
-## FASE 0: INFRAESTRUCTURA
-> Setup base antes de tocar cualquier página
+## Fase 1 — Landing page (ID 10)
+- [x] Hero final
+- [x] Bloques Soltar / Conectar / Crecer
+- [x] Sobre Helena
+- [x] Cards de acceso a ofertas
+- [x] Qué es Seramor
+- [x] Testimonios
+- [x] Footer publicado
+- [x] Validación desktop
+- [x] Validación responsive básica
 
-- [ ] 0.1 Desactivar Elementor (no se usa, evita conflictos)
-- [ ] 0.2 Obtener IDs de todas las páginas existentes via REST API
-- [ ] 0.3 Subir imágenes seleccionadas al Media Library via REST API
-- [ ] 0.4 Configurar Astra: colores de marca, tipografías, layout full-width, sin sidebar
-- [ ] 0.5 Inyectar CSS global custom (botones dorados, secciones full-width, espaciados, tipografía)
-- [ ] 0.6 Configurar menú de navegación con logo
+## Fase 2 — Páginas públicas clave
 
-## FASE 1: LANDING PAGE (HOME) — PRIMERA ENTREGA
-> Prioridad máxima. Debe quedar en versión final.
+### 2.1 Programa de 3 meses (ID 17)
+- [x] Guion visual definido desde Canva anterior
+- [x] Hero de venta con precio visible
+- [x] Sección esto es para ti si
+- [x] Viaje de 3 meses
+- [x] Qué incluye
+- [x] FAQ base
+- [x] CTA internos sin fuga de embudo
+- [ ] Checkout real conectado
+- [ ] Validación final con captura
 
-### Secciones de la Landing (según Notion + estilo Canva):
+### 2.2 Consejo de Diosas pública (ID 14)
+- [x] Hero con precio y CTA principal
+- [x] Explicación breve
+- [x] Biblioteca teaser bloqueada por categorías
+- [x] Sección qué encontrarás dentro
+- [x] Bloque de acceso con login / registro
+- [x] CTA secundario al programa 3 meses
+- [ ] Suscripción real conectada
+- [ ] Pop-up de acceso restringido
+- [ ] Validación final con captura
 
-- [ ] 1.1 **HERO** — Cover full-width
-  - Foto Helena en naturaleza (cenote/bosque) como fondo
-  - Overlay verde oscuro semi-transparente
-  - Logo Seramor dorado centrado
-  - Subtítulo: "Círculo de Mujeres Online"
-  - Subtítulo 2: "Nature-Inspired Wellness & Healing Arts" (o versión ES)
-  - CTA: "Descubre el Programa" → enlace a Programa 3 meses
-  - Tipografía: título uppercase con tracking, subtítulo serif
+### 2.3 Sobre Seramor (ID 20)
+- [ ] Refinar copy y layout final
 
-- [ ] 1.2 **QUÉ ES SERAMOR** — Sección crema/clara
-  - Columnas: imagen izq + texto der
-  - Texto del Notion: "espacio de introspección para mujeres, reconexión, sanación juntas"
-  - Foto de Helena/naturaleza
-  - Estilo: fondo crema claro, texto verde oscuro (#37432b)
+### 2.4 Servicios / Tienda (ID 12)
+- [ ] Revisar necesidad real dentro del embudo
 
-- [ ] 1.3 **MUJER CREADORA** — Sección verde oscuro
-  - Intro al programa de 3 meses
-  - Fondo verde bosque (#37432b)
-  - Texto claro/dorado (#fce8a4)
-  - "Un programa de 3 meses para mujeres que quieren construir con claridad y apoyo real"
-  - CTA: "Conoce el Programa" → botón borde dorado
+### 2.5 Contacto (ID 22)
+- [ ] Ajustar formulario y CTA final
 
-- [ ] 1.4 **QUÉ INCLUYE** — Sección crema
-  - Grid/columnas con iconos o bullets dorados
-  - Sesiones semanales, retiro mensual, comunidad, meditaciones, masterclass, cuaderno, grupo max 10
-  - Estilo limpio, espaciado
+### 2.6 Legales (ID 3 y faltantes)
+- [ ] Política de privacidad final
+- [ ] Cookies / RGPD
 
-- [ ] 1.5 **SOBRE HELENA** — Media + Text
-  - Foto Helena + bio corta
-  - "Facilitadora de círculos de mujeres, profesora de yoga, desde los 11 años en círculos"
-  - Fondo alternado (verde oscuro o imagen de fondo)
+## Fase 3 — Membresía y acceso privado
+- [ ] Instalar Paid Memberships Pro
+- [ ] Configurar Stripe test
+- [ ] Crear niveles:
+  - Consejo de Diosas — 39 EUR/mes
+  - Programa 3M pago único — 500 EUR
+  - Programa 3M plazos — 3 x 180 EUR
+- [ ] Crear páginas operativas: login, registro, checkout, cuenta, confirmación, niveles
+- [ ] Reemplazar CTAs placeholder por checkout real
+- [ ] Crear biblioteca privada del Consejo
+- [ ] Restringir acceso por nivel
+- [ ] Añadir estados de acceso y pop-ups restringidos
 
-- [ ] 1.6 **TESTIMONIOS** — Sección crema
-  - Quotes de participantes (si hay disponibles)
-  - Estilo: comillas doradas, texto serif italic
-  - Si no hay testimonios reales: placeholder elegante
-
-- [ ] 1.7 **FAQ** — Sección verde oscuro
-  - 4 preguntas: ¿Cómo y cuándo se realiza cada ritual? ¿Recibiré grabación si no asisto? ¿Qué incluye el programa? ¿Qué debo preparar?
-  - Estilo accordion/toggle
-
-- [ ] 1.8 **CTA FINAL** — Cover con imagen
-  - "¿Lista para transformar tu vida?"
-  - Botón dorado al programa
-  - Foto de fondo naturaleza
-
-- [ ] 1.9 **FOOTER**
-  - Logo Seramor
-  - Links: Sobre nosotras, Programa, Contacto, Legales
-  - Redes sociales (Instagram)
-  - © 2026 Seramor
-
-- [ ] 1.10 **REVISIÓN Y VALIDACIÓN**
-  - Screenshot completo de la landing terminada
-  - Validar responsive (mobile)
-  - Validar que CTAs funcionan
-  - Presentar a Cande para aprobación
-
-## FASE 2: PÁGINAS INTERIORES (una por una, validando cada una)
-
-### 2.1 Programa de 3 meses (VENTA — embudo cerrado)
-- [ ] 2.1.1 Hero de compra con precio (500€, antes 600€)
-- [ ] 2.1.2 Sección "Qué es"
-- [ ] 2.1.3 Viaje de 3 meses (Mes1, Mes2, Mes3)
-- [ ] 2.1.4 Qué incluye (detallado)
-- [ ] 2.1.5 Sección precio + opciones de pago
-- [ ] 2.1.6 Cierre de urgencia
-- [ ] 2.1.7 FAQ específico del programa
-- [ ] 2.1.8 SIN links salientes (embudo cerrado)
-- [ ] 2.1.9 Revisión y validación
-
-### 2.2 Sobre Seramor
-- [ ] 2.2.1 Historia de Helena
-- [ ] 2.2.2 Valores y enfoque
-- [ ] 2.2.3 Fotos personales
-- [ ] 2.2.4 Revisión y validación
-
-### 2.3 Consejo de Diosas (membresía 39€/mes)
-- [ ] 2.3.1 Instalar plugin de membresía
-- [ ] 2.3.2 Hero + Qué es
-- [ ] 2.3.3 Vista bloqueada/desbloqueada
-- [ ] 2.3.4 Precio y registro
-- [ ] 2.3.5 Pop-up acceso restringido
-- [ ] 2.3.6 CTA secundarios al programa 3 meses
-- [ ] 2.3.7 Revisión y validación
-
-### 2.4 Servicios / Tienda
-- [ ] 2.4.1 Catálogo de servicios
-- [ ] 2.4.2 Revisión y validación
-
-### 2.5 Contacto
-- [ ] 2.5.1 Formulario simple
-- [ ] 2.5.2 CTA Instagram/WhatsApp
-- [ ] 2.5.3 Revisión y validación
-
-### 2.6 Legales
-- [ ] 2.6.1 Política de privacidad (RGPD)
-- [ ] 2.6.2 Política de cookies
-- [ ] 2.6.3 Revisión y validación
-
-## FASE 3: FUNCIONALIDADES AVANZADAS
-
-- [ ] 3.1 Sistema de pagos (WooCommerce o Stripe)
-- [ ] 3.2 Membresía Consejo de Diosas (Paid Memberships Pro o similar)
-- [ ] 3.3 Integración Mailchimp
-- [ ] 3.4 SEO (Yoast o Rank Math)
-- [ ] 3.5 Cookies/RGPD (CookieYes o similar)
-- [ ] 3.6 Optimización responsive final
-- [ ] 3.7 Velocidad y performance
-
----
-
-## IDs DE PÁGINAS
+## IDs de páginas
 | ID | Página | Slug |
 |----|--------|------|
 | 10 | Landing Page (HOME) | landing-page |
@@ -154,26 +93,24 @@
 | 20 | Sobre Seramor | sobre-seramor |
 | 12 | Servicios | catalogo-de-servicios |
 | 22 | Contacta con nosotras | contacta-con-nosotras |
-| 3  | Política de privacidad (borrador) | politica-privacidad |
+| 3 | Política de privacidad | politica-privacidad |
 
-- Front page: ID 10 (Landing Page)
+## Método técnico en uso
+- Publicación de páginas por scripts PHP en scripts/
+- Ejecución por WP-CLI sobre c:\xampp\htdocs\seramor
+- Estilos globales y fixes en wp-content/mu-plugins/seramor-site-runtime.php
+- Validación visual con screenshots locales
 
-## MÉTODO TÉCNICO
-- **WP-CLI** (C:\xampp\htdocs\seramor\wp.bat) → plugins, opciones, settings, importar media
-- **Playwright** (browser automation) → Astra customizer, configuraciones visuales
-- **Edición directa** en C:\xampp\htdocs\seramor\ → archivos theme si hace falta
-- Bloques Gutenberg: `wp:cover`, `wp:columns`, `wp:media-text`, `wp:buttons`, `wp:group`, `wp:separator`
-- Screenshots con ruta absoluta para verificación
-
-## CREDENCIALES
+## Credenciales de entorno local
 - WP Admin: admin_seramor / Salypimienta1.
 - URL: http://localhost/seramor/wp-admin
-- WP Path: C:\xampp\htdocs\seramor\
-- WP-CLI: C:\xampp\htdocs\seramor\wp.bat
+- WP Path: c:\xampp\htdocs\seramor
+- WP-CLI: c:\xampp\htdocs\seramor\wp-cli.phar
 
-## ESTADO ACTUAL
-- Fase 0: EN PROGRESO
-  - [x] 0.1 Elementor desactivado
-  - [x] 0.2 IDs de páginas obtenidos
-- Fase 1: NO INICIADA
-- Última actualización: 2026-04-20
+## Siguiente bloque operativo
+1. Publicar y validar Programa 3 meses.
+2. Publicar y validar Consejo de Diosas pública.
+3. Instalar PMPro y conectar Stripe test.
+4. Crear biblioteca privada y restricciones.
+
+Última actualización: 2026-04-23

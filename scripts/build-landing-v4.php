@@ -2,7 +2,7 @@
 /**
  * Build Landing Page (ID 10) - Seramor - V4
  * Fidelidad al PNG/Canva proporcionado por la usuaria.
- * Estilos en mu-plugin (seramor-fonts.php). Aquí solo bloques Gutenberg válidos.
+ * Estilos en mu-plugin (seramor-site-runtime.php). Aquí solo bloques Gutenberg válidos.
  *
  * Run: wp eval-file scripts/build-landing-v4.php
  *

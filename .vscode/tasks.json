@@ -1,0 +1,403 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Stripe CLI status",
+			"type": "shell",
+			"command": "\"C:\\Users\\cande\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Stripe.StripeCli_Microsoft.Winget.Source_8wekyb3d8bbwe\\stripe.exe\" config --list",
+			"isBackground": false
+		},
+		{
+			"label": "PMPro recent orders",
+			"type": "shell",
+			"command": "c:\\xampp\\php\\php.exe c:\\xampp\\htdocs\\seramor\\wp-cli.phar db query \"SELECT id, user_id, membership_id, status, gateway, total, datetime FROM wp_pmpro_membership_orders ORDER BY id DESC LIMIT 8;\" --path=c:\\xampp\\htdocs\\seramor",
+			"isBackground": false
+		},
+		{
+			"label": "PMPro memberships",
+			"type": "shell",
+			"command": "c:\\xampp\\php\\php.exe c:\\xampp\\htdocs\\seramor\\wp-cli.phar db query \"SELECT um.user_id, um.membership_id, l.name, um.status, um.startdate, um.enddate FROM wp_pmpro_memberships_users um LEFT JOIN wp_pmpro_membership_levels l ON l.id = um.membership_id ORDER BY um.id DESC LIMIT 8;\" --path=c:\\xampp\\htdocs\\seramor",
+			"isBackground": false
+		},
+		{
+			"label": "PMPro recent orders args",
+			"type": "shell",
+			"command": "c:\\xampp\\php\\php.exe",
+			"args": [
+				"c:\\xampp\\htdocs\\seramor\\wp-cli.phar",
+				"db",
+				"query",
+				"SELECT id, user_id, membership_id, status, gateway, total, datetime FROM wp_pmpro_membership_orders ORDER BY id DESC LIMIT 8;",
+				"--path=c:\\xampp\\htdocs\\seramor"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "PMPro memberships args",
+			"type": "shell",
+			"command": "c:\\xampp\\php\\php.exe",
+			"args": [
+				"c:\\xampp\\htdocs\\seramor\\wp-cli.phar",
+				"db",
+				"query",
+				"SELECT um.user_id, um.membership_id, l.name, um.status, um.startdate, um.enddate FROM wp_pmpro_memberships_users um LEFT JOIN wp_pmpro_membership_levels l ON l.id = um.membership_id ORDER BY um.id DESC LIMIT 8;",
+				"--path=c:\\xampp\\htdocs\\seramor"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "MySQL recent PMPro orders",
+			"type": "shell",
+			"command": "c:\\xampp\\mysql\\bin\\mysql.exe",
+			"args": [
+				"-u",
+				"root",
+				"-D",
+				"seramor",
+				"-e",
+				"SELECT id, user_id, membership_id, status, gateway, total, datetime FROM wp_pmpro_membership_orders ORDER BY id DESC LIMIT 8;"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "MySQL PMPro memberships",
+			"type": "shell",
+			"command": "c:\\xampp\\mysql\\bin\\mysql.exe",
+			"args": [
+				"-u",
+				"root",
+				"-D",
+				"seramor",
+				"-e",
+				"SELECT um.user_id, um.membership_id, l.name, um.status, um.startdate, um.enddate FROM wp_pmpro_memberships_users um LEFT JOIN wp_pmpro_membership_levels l ON l.id = um.membership_id ORDER BY um.id DESC LIMIT 8;"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Describe PMPro orders",
+			"type": "shell",
+			"command": "c:\\xampp\\mysql\\bin\\mysql.exe",
+			"args": [
+				"-u",
+				"root",
+				"-D",
+				"seramor",
+				"-e",
+				"DESCRIBE wp_pmpro_membership_orders;"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Count PMPro memberships",
+			"type": "shell",
+			"command": "c:\\xampp\\mysql\\bin\\mysql.exe",
+			"args": [
+				"-u",
+				"root",
+				"-D",
+				"seramor",
+				"-e",
+				"SELECT COUNT(*) AS memberships_count FROM wp_pmpro_memberships_users;"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Recent PMPro orders fixed",
+			"type": "shell",
+			"command": "c:\\xampp\\mysql\\bin\\mysql.exe",
+			"args": [
+				"-u",
+				"root",
+				"-D",
+				"seramor",
+				"-e",
+				"SELECT id, user_id, membership_id, status, gateway, total, timestamp FROM wp_pmpro_membership_orders ORDER BY id DESC LIMIT 8;"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Stripe CLI config list",
+			"type": "shell",
+			"command": "\"C:\\Users\\cande\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Stripe.StripeCli_Microsoft.Winget.Source_8wekyb3d8bbwe\\stripe.exe\"",
+			"args": [
+				"config",
+				"--list"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Stripe CLI config list post-auth",
+			"type": "shell",
+			"command": "\"C:\\Users\\cande\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Stripe.StripeCli_Microsoft.Winget.Source_8wekyb3d8bbwe\\stripe.exe\"",
+			"args": [
+				"config",
+				"--list"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Recent PMPro orders after auth",
+			"type": "shell",
+			"command": "c:\\xampp\\mysql\\bin\\mysql.exe",
+			"args": [
+				"-u",
+				"root",
+				"-D",
+				"seramor",
+				"-e",
+				"SELECT id, user_id, membership_id, status, gateway, total, timestamp FROM wp_pmpro_membership_orders ORDER BY id DESC LIMIT 5;"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Search requirebilling in PMPro",
+			"type": "shell",
+			"command": "rg",
+			"args": [
+				"-n",
+				"pmpro_requirebilling|requirebilling",
+				"c:\\xampp\\htdocs\\seramor\\wp-content\\plugins\\paid-memberships-pro"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Search gateway none in PMPro",
+			"type": "shell",
+			"command": "rg",
+			"args": [
+				"-n",
+				"gateway-none|Payment Information|pmpro_payment_information_fields",
+				"c:\\xampp\\htdocs\\seramor\\wp-content\\plugins\\paid-memberships-pro"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Recent PMPro orders now",
+			"type": "shell",
+			"command": "c:\\xampp\\mysql\\bin\\mysql.exe",
+			"args": [
+				"-u",
+				"root",
+				"-D",
+				"seramor",
+				"-e",
+				"SELECT id, code, user_id, membership_id, status, gateway, gateway_environment, total, payment_transaction_id, subscription_transaction_id, timestamp FROM wp_pmpro_membership_orders ORDER BY id DESC LIMIT 8;"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "PMPro memberships now",
+			"type": "shell",
+			"command": "c:\\xampp\\mysql\\bin\\mysql.exe",
+			"args": [
+				"-u",
+				"root",
+				"-D",
+				"seramor",
+				"-e",
+				"SELECT um.id, um.user_id, um.membership_id, l.name, um.status, um.startdate, um.enddate FROM wp_pmpro_memberships_users um LEFT JOIN wp_pmpro_membership_levels l ON l.id = um.membership_id ORDER BY um.id DESC LIMIT 8;"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Tail Apache error log",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Get-Content 'c:\\xampp\\apache\\logs\\error.log' -Tail 200"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Find using_api_keys in Stripe gateway",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Select-String -Path 'c:\\xampp\\htdocs\\seramor\\wp-content\\plugins\\paid-memberships-pro\\classes\\gateways\\class.pmprogateway_stripe.php' -Pattern 'using_api_keys|using_stripe_checkout|stripe_connect' | Select-Object LineNumber,Line | Format-Table -Wrap"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Find Stripe gateway methods",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Select-String -Path 'c:\\xampp\\htdocs\\seramor\\wp-content\\plugins\\paid-memberships-pro\\classes\\gateways\\class.pmprogateway_stripe.php' -Pattern 'using_api_keys','using_stripe_checkout','stripe_connect' | Select-Object LineNumber,Line | Format-Table -Wrap"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Check PMPro Stripe runtime",
+			"type": "shell",
+			"command": "c:\\xampp\\php\\php.exe",
+			"args": [
+				"c:\\xampp\\htdocs\\seramor\\wp-cli.phar",
+				"eval",
+				"echo 'env=' . get_option('pmpro_gateway_environment') . PHP_EOL; echo 'gateway=' . get_option('pmpro_gateway') . PHP_EOL; echo 'secret=' . ( get_option('pmpro_stripe_secretkey') ? strlen(get_option('pmpro_stripe_secretkey')) : 0 ) . PHP_EOL; echo 'pub=' . ( get_option('pmpro_stripe_publishablekey') ? strlen(get_option('pmpro_stripe_publishablekey')) : 0 ) . PHP_EOL; echo 'using_api_keys=' . ( PMProGateway_stripe::using_api_keys() ? 'yes' : 'no' ) . PHP_EOL;",
+				"--path=c:\\xampp\\htdocs\\seramor"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Check PMPro connect runtime",
+			"type": "shell",
+			"command": "c:\\xampp\\php\\php.exe",
+			"args": [
+				"c:\\xampp\\htdocs\\seramor\\wp-cli.phar",
+				"eval",
+				"echo 'live_connect_secret=' . ( get_option('pmpro_live_stripe_connect_secretkey') ? strlen(get_option('pmpro_live_stripe_connect_secretkey')) : 0 ) . PHP_EOL; echo 'sandbox_connect_secret=' . ( get_option('pmpro_sandbox_stripe_connect_secretkey') ? strlen(get_option('pmpro_sandbox_stripe_connect_secretkey')) : 0 ) . PHP_EOL;",
+				"--path=c:\\xampp\\htdocs\\seramor"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Replay failed webhook 1",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"(Invoke-WebRequest -UseBasicParsing 'https://localhost/seramor/wp-admin/admin-ajax.php?action=stripe_webhook&event_id=evt_1TPMkAJuhfEkLRax77uTzOkF').Content"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Replay failed webhook 2",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"(Invoke-WebRequest -UseBasicParsing 'https://localhost/seramor/wp-admin/admin-ajax.php?action=stripe_webhook&event_id=evt_1TPMmuJuhfEkLRaxokE1MkeM').Content"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Tail Apache error log latest",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Get-Content 'c:\\xampp\\apache\\logs\\error.log' -Tail 40"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Count memberships after replay",
+			"type": "shell",
+			"command": "c:\\xampp\\mysql\\bin\\mysql.exe",
+			"args": [
+				"-u",
+				"root",
+				"-D",
+				"seramor",
+				"-e",
+				"SELECT COUNT(*) AS memberships_count FROM wp_pmpro_memberships_users; SELECT id, user_id, membership_id, status, payment_transaction_id, subscription_transaction_id FROM wp_pmpro_membership_orders ORDER BY id DESC LIMIT 4;"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Check Sobre Ser Amor page row",
+			"type": "shell",
+			"command": "c:\\xampp\\mysql\\bin\\mysql.exe",
+			"args": [
+				"-u",
+				"root",
+				"-D",
+				"seramor",
+				"-e",
+				"SELECT ID, post_title, post_name, post_status, post_type, post_parent, post_modified, CHAR_LENGTH(post_content) AS content_len FROM wp_posts WHERE post_type='page' AND (post_title LIKE '%Sobre%' OR post_title LIKE '%Ser Amor%' OR post_name LIKE '%sobre%' OR post_name LIKE '%ser-amor%') ORDER BY ID DESC;"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "List recent WP pages",
+			"type": "shell",
+			"command": "c:\\xampp\\mysql\\bin\\mysql.exe",
+			"args": [
+				"-u",
+				"root",
+				"-D",
+				"seramor",
+				"-e",
+				"SELECT ID, post_title, post_name, post_status, guid FROM wp_posts WHERE post_type='page' ORDER BY ID DESC LIMIT 50;"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Fetch sobre-ser-amor HTML",
+			"type": "shell",
+			"command": "curl.exe",
+			"args": [
+				"-L",
+				"-k",
+				"http://localhost/seramor/sobre-ser-amor/"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Fetch sobre-seramor HTML",
+			"type": "shell",
+			"command": "curl.exe",
+			"args": [
+				"-L",
+				"-k",
+				"http://localhost/seramor/sobre-seramor/"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "MySQL find sobre pages",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"& 'c:\\xampp\\mysql\\bin\\mysql.exe' -u root -D seramor -e \"SELECT ID, post_title, post_name, post_status, post_type, post_parent, post_modified, CHAR_LENGTH(post_content) AS content_len FROM wp_posts WHERE post_type='page' AND (post_title LIKE '%Sobre%' OR post_title LIKE '%Ser Amor%' OR post_name LIKE '%sobre%' OR post_name LIKE '%seramor%') ORDER BY ID DESC;\""
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Search sobre-seramor references",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Get-ChildItem -Path 'c:\\xampp\\htdocs\\seramor\\wp-content' -Recurse -File | Select-String -Pattern 'sobre-seramor|sobre-ser-amor|Sobre Seramor|Sobre Ser Amor' | Select-Object Path, LineNumber, Line -First 80 | Format-Table -Wrap"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "WP get Sobre Seramor meta",
+			"type": "shell",
+			"command": "c:\\xampp\\php\\php.exe",
+			"args": [
+				"c:\\xampp\\htdocs\\seramor\\wp-cli.phar",
+				"eval",
+				"$page = get_page_by_path('sobre-seramor'); if (!$page) { echo \"NOT_FOUND\\n\"; return; } echo 'ID=' . $page->ID . PHP_EOL; echo 'TITLE=' . $page->post_title . PHP_EOL; echo 'STATUS=' . $page->post_status . PHP_EOL; echo 'CONTENT_LEN=' . strlen((string) $page->post_content) . PHP_EOL;",
+				"--path=c:\\xampp\\htdocs\\seramor"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "WP list Sobre Seramor revisions",
+			"type": "shell",
+			"command": "c:\\xampp\\php\\php.exe",
+			"args": [
+				"c:\\xampp\\htdocs\\seramor\\wp-cli.phar",
+				"eval",
+				"$page = get_page_by_path('sobre-seramor'); if (!$page) { echo \"NOT_FOUND\\n\"; return; } $revisions = wp_get_post_revisions($page->ID, array('order' => 'DESC')); foreach ($revisions as $revision) { echo 'REV=' . $revision->ID . ' DATE=' . $revision->post_modified . ' LEN=' . strlen((string) $revision->post_content) . PHP_EOL; }",
+				"--path=c:\\xampp\\htdocs\\seramor"
+			],
+			"isBackground": false
+		}
+	]
+}
