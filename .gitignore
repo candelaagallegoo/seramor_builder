@@ -1,0 +1,14 @@
+.playwright-mcp/
+imagenes/canvas/
+imagenes/screenshots/
+imagenes/thumbs/
+scripts/upload-log.txt
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.log
+Thumbs.db
+.DS_Store
+docs/accesos.md

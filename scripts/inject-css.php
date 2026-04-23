@@ -1,0 +1,212 @@
+<?php
+/**
+ * Inyecta CSS global personalizado para Seramor
+ * Ejecutar con: wp eval-file inject-css.php
+ */
+
+$css = <<<'CSS'
+/* ============================
+   SERAMOR — Global Custom CSS
+   ============================ */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&family=Great+Vibes&display=swap');
+
+/* ---- CSS Variables ---- */
+:root {
+    --seramor-verde:    #37432b;
+    --seramor-dorado:   #fce8a4;
+    --seramor-marron:   #733015;
+    --seramor-crema:    #faf7f0;
+    --seramor-blanco:   #ffffff;
+    --seramor-negro:    #1a2214;
+    --font-heading:     'Montserrat', sans-serif;
+    --font-body:        'Cormorant Garamond', serif;
+    --font-script:      'Great Vibes', cursive;
+}
+
+/* ---- Full-width sections ---- */
+.wp-block-group.alignfull,
+.wp-block-cover.alignfull {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 80px 5%;
+}
+
+/* ---- Section Backgrounds ---- */
+.seccion-verde {
+    background-color: var(--seramor-verde) !important;
+    color: var(--seramor-crema);
+}
+.seccion-verde h1, .seccion-verde h2, .seccion-verde h3,
+.seccion-verde h4, .seccion-verde h5, .seccion-verde h6 {
+    color: var(--seramor-dorado) !important;
+}
+
+.seccion-crema {
+    background-color: var(--seramor-crema) !important;
+    color: var(--seramor-verde);
+}
+.seccion-crema h1, .seccion-crema h2, .seccion-crema h3,
+.seccion-crema h4, .seccion-crema h5, .seccion-crema h6 {
+    color: var(--seramor-verde) !important;
+}
+
+.seccion-imagen {
+    position: relative;
+}
+.seccion-imagen .wp-block-cover__inner-container {
+    position: relative;
+    z-index: 2;
+}
+
+/* ---- Typography ---- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.3;
+}
+
+body, p, li, td {
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+/* Script/cursive emphasis */
+.texto-script,
+em.script {
+    font-family: var(--font-script) !important;
+    font-style: normal;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 1.3em;
+}
+
+/* ---- Buttons — Dorado sobre verde ---- */
+.wp-block-button__link,
+.ast-button,
+a.wp-block-button__link {
+    background-color: var(--seramor-dorado) !important;
+    color: var(--seramor-verde) !important;
+    border: 2px solid var(--seramor-dorado) !important;
+    border-radius: 30px !important;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 16px 40px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.wp-block-button__link:hover,
+.ast-button:hover,
+a.wp-block-button__link:hover {
+    background-color: var(--seramor-verde) !important;
+    color: var(--seramor-dorado) !important;
+    border-color: var(--seramor-dorado) !important;
+}
+
+/* Outline button variant */
+.is-style-outline .wp-block-button__link {
+    background-color: transparent !important;
+    color: var(--seramor-dorado) !important;
+    border: 2px solid var(--seramor-dorado) !important;
+}
+.is-style-outline .wp-block-button__link:hover {
+    background-color: var(--seramor-dorado) !important;
+    color: var(--seramor-verde) !important;
+}
+
+/* ---- Cover overlay verde ---- */
+.wp-block-cover.overlay-verde .wp-block-cover__background {
+    background-color: var(--seramor-verde) !important;
+    opacity: 0.75;
+}
+
+/* ---- Separador dorado ---- */
+.wp-block-separator.separador-dorado {
+    border-color: var(--seramor-dorado) !important;
+    width: 60px;
+    border-width: 2px;
+    margin: 30px auto;
+}
+
+/* ---- Quotes / Testimonials ---- */
+.wp-block-quote {
+    border-left: 4px solid var(--seramor-dorado);
+    padding-left: 24px;
+    font-family: var(--font-body);
+    font-style: italic;
+    font-size: 1.15em;
+}
+.wp-block-quote cite {
+    font-family: var(--font-heading);
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--seramor-marron);
+}
+
+/* ---- Spacing helpers ---- */
+.padding-xl { padding: 100px 5%; }
+.padding-lg { padding: 80px 5%; }
+.padding-md { padding: 60px 5%; }
+
+/* ---- Header tweaks ---- */
+.ast-primary-header-bar {
+    background-color: var(--seramor-verde) !important;
+}
+.ast-header-break-point .ast-primary-header-bar {
+    background-color: var(--seramor-verde) !important;
+}
+
+/* ---- Footer ---- */
+.ast-footer-overlay,
+.site-footer {
+    background-color: var(--seramor-negro) !important;
+    color: var(--seramor-dorado) !important;
+}
+.site-footer a {
+    color: var(--seramor-dorado) !important;
+}
+.site-footer a:hover {
+    color: var(--seramor-blanco) !important;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+    .wp-block-group.alignfull,
+    .wp-block-cover.alignfull {
+        padding: 50px 4%;
+    }
+    h1 { font-size: 28px !important; }
+    h2 { font-size: 24px !important; }
+    h3 { font-size: 20px !important; }
+    .wp-block-button__link {
+        padding: 12px 24px;
+        font-size: 13px;
+    }
+}
+CSS;
+
+// Get or create the custom CSS post
+$custom_css_post_id = wp_get_custom_css_post();
+if ($custom_css_post_id) {
+    // Append to existing CSS
+    $existing = wp_get_custom_css();
+    wp_update_custom_css_post($css);
+    echo "✅ CSS actualizado en el Customizer (reemplazado)\n";
+} else {
+    wp_update_custom_css_post($css);
+    echo "✅ CSS inyectado en el Customizer\n";
+}
+
+echo "   - Variables CSS: 7 colores Seramor\n";
+echo "   - Google Fonts: Montserrat + Cormorant Garamond + Great Vibes\n";
+echo "   - Clases: seccion-verde, seccion-crema, texto-script, overlay-verde\n";
+echo "   - Botones: dorado/verde con hover invertido, outline variant\n";
+echo "   - Responsive: mobile breakpoints\n";
