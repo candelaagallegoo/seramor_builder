@@ -12,3 +12,4 @@ scripts/upload-log.txt
 Thumbs.db
 .DS_Store
 docs/accesos.md
+docs/deploy.md
