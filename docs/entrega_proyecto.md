@@ -9,15 +9,6 @@
 
 ---
 
-> **Nota de formato para la versión final en Word/PDF:**
-> A4, márgenes 2,5 cm izq · 1,5 cm der · 3 cm sup · 2 cm inf, interlineado 1,5,
-> texto en Arial 11 justificado, títulos en Arial 12 negrita, encabezado con
-> "Proyecto fin de grado" a la izquierda y nombre del autor a la derecha,
-> pie de página con número de página centrado. Extensión objetivo 20-25
-> páginas (máx. 30 sin contar anexos ni bibliografía).
-
----
-
 ## Índice
 
 1. Introducción
@@ -424,10 +415,25 @@ flowchart TD
 | 17 | Programa de 3 meses | `programa-de-3-meses` | Pública comercial |
 | 14 | Consejo de Diosas | `plataforma-de-contenido-por-suscripcion` | Pública comercial + zona privada |
 | 20 | Sobre Seramor | `sobre-seramor` | Pública |
-| 12 | Servicios | `catalogo-de-servicios` | Pública |
-| 22 | Contacta con nosotras | `contacta-con-nosotras` | Pública |
-| 3 | Política de privacidad | `politica-privacidad` | Legal |
-| — | Páginas operativas PMPro | `account`, `checkout`, `login`, `levels`, etc. | Sistema |
+| 22 | Conoce, visita y contacta | `contacta-con-nosotras` | Pública |
+| 3 | Información legal | `politica-privacidad` | Legal |
+| 140 | Mi cuenta | `mi-cuenta` | Sistema PMPro |
+| 141 | Facturación | `facturacion` | Sistema PMPro |
+| 142 | Cancelar suscripción | `cancelar-suscripcion` | Sistema PMPro |
+| 143 | Registro | `checkout` | Sistema PMPro |
+| 144 | Confirmación | `confirmacion` | Sistema PMPro |
+| 145 | Pedidos | `pedidos` | Sistema PMPro |
+| 146 | Membresías | `membresias` | Sistema PMPro |
+| 147 | Acceso | `login` | Sistema PMPro |
+| 148 | Tu perfil | `tu-perfil` | Sistema PMPro |
+| 153 | Biblioteca Consejo de Diosas | `biblioteca-consejo` | Privada |
+| 154 | Empieza por aquí | `empieza-por-aqui` | Privada |
+| 155 | Sanación y reconexión femenina | `sanacion-y-reconexion` | Privada |
+| 156 | Crea una vida libre | `vida-libre` | Privada |
+| 157 | Para cuidarte | `practicas-para-cuidarte` | Privada |
+| 158 | Biblioteca de sabiduría y recursos prácticos | `sabiduria-y-recursos` | Privada |
+| 159 | Cuaderno e integración | `cuaderno-e-integracion` | Privada |
+| 160 | Encuentros y eventos | `encuentros-y-eventos` | Privada |
 
 #### 4.3.3 Identidad visual
 
@@ -540,8 +546,8 @@ erDiagram
     WP_PMPRO_MEMBERSHIP_LEVELS ||--o{ WP_PMPRO_MEMBERSHIP_ORDERS : membership_id
 ```
 
-> El DER detallado, incluyendo las relaciones internas jerárquicas y las
-> tablas auxiliares, está disponible en el anexo técnico.
+> El diagrama anterior resume las relaciones principales utilizadas en el
+> proyecto y resulta suficiente para justificar el modelo de datos empleado.
 
 ### 4.4 Infraestructura
 
@@ -622,20 +628,21 @@ flowchart LR
 #### 4.4.5 Servicios externos
 
 - **Stripe** (pagos, suscripciones, webhooks).
-- **GitHub** (repositorio del *builder*).
+- **Git** (control de versiones del desarrollo).
 - **Pinterest, Canva, Notion** (referencias visuales y contenido).
 
 ### 4.5 Implementación
 
 #### 4.5.1 Organización en dos repositorios
 
-El proyecto está dividido en **dos repositorios independientes**, alojados
-en GitHub bajo la cuenta `candelaagallegoo`:
+La solución se estructuró en **dos repositorios independientes** para
+separar la construcción automatizada del sitio y la aplicación WordPress
+desplegable:
 
-| Repositorio | URL | Ruta local | Función |
-|-------------|-----|------------|---------|
-| **Builder** | https://github.com/candelaagallegoo/seramor_builder | `C:\Users\cande\Desktop\PROGRAMACION\WEBSITE_BUILDER_WORKSPACE` | Scripts de construcción, planes, documentación (incluye este TFG) |
-| **Website** | https://github.com/candelaagallegoo/serarmor_website | `C:\xampp\htdocs\seramor` | Instalación WordPress completa que se despliega al servidor |
+| Repositorio | Ruta local | Contenido | Función |
+|-------------|------------|-----------|---------|
+| **Builder** | `C:\Users\cande\Desktop\PROGRAMACION\WEBSITE_BUILDER_WORKSPACE` | Scripts PHP y PowerShell, documentación técnica y recursos de apoyo | Generar páginas, configurar Astra y PMPro, y preparar despliegues |
+| **Website** | `C:\xampp\htdocs\seramor` | Instalación completa de WordPress con tema, plugins y *mu-plugin* propio | Ejecutar la web en local y en producción |
 
 Esta separación responde a un principio de **separación de
 responsabilidades**: el código que *genera* el sitio no se mezcla con la
@@ -739,10 +746,8 @@ documentado:
 9. Recrear el webhook de Stripe apuntando al dominio remoto.
 10. Verificar accesibilidad por HTTPS.
 
-Este procedimiento, descrito en detalle en
-`docs/stripe-local-y-server.md` y `docs/integraciones.md`, es
-**reproducible en cualquier momento** y elimina la dependencia de
-clientes FTP visuales o de paneles de hosting.
+Este procedimiento es **reproducible en cualquier momento** y elimina la
+dependencia de clientes FTP visuales o de paneles de hosting.
 
 ### 4.6 Pruebas y validación
 
@@ -773,9 +778,8 @@ y los CTAs se adaptan correctamente.
 #### 4.6.4 Validación frente a los objetivos
 
 Cada objetivo específico definido en la sección 2.2 ha sido verificado
-mediante una evidencia concreta: capturas, registros en base de datos o
-ejecución reproducible de scripts. El detalle aparece en el anexo
-técnico.
+mediante evidencias concretas: capturas, registros en base de datos y
+ejecución reproducible de scripts presentados a lo largo de esta memoria.
 
 ### 4.7 Problemas encontrados y soluciones aplicadas
 
@@ -835,21 +839,36 @@ para activar accesos.
 
 ### 5.3 Evidencias visuales
 
-`[COMPLETAR: insertar capturas finales en la versión PDF]`
+A continuación se incluyen las principales capturas de validación visual y
+funcional del sistema.
 
-Listado de figuras previstas:
+**Figura 1.** Vista general de la *landing page* en escritorio.
 
-- **Figura 1.** Vista general de la *landing page* en escritorio.
-- **Figura 2.** Página del Programa de 3 meses con CTA de checkout.
-- **Figura 3.** Página del Consejo de Diosas con bloque de suscripción.
-- **Figura 4.** Vista responsive en móvil de la landing.
-- **Figura 5.** Panel PMPro con los niveles configurados.
-- **Figura 6.** Stripe Dashboard mostrando un evento de pago confirmado.
-- **Figura 7.** Tabla `wp_pmpro_memberships_users` con membresía activa
-  tras un pago de prueba.
-- **Figura 8.** Salida de `stripe listen` reenviando eventos a localhost.
-- **Figura 9.** Sitio público en `https://candela-tfg.purenet.work/` con
-  candado HTTPS válido.
+![Figura 1. Landing page en escritorio](../imagenes/tfg-2026-04-24/01-landing-desktop.png)
+
+**Figura 2.** Vista responsive en móvil de la *landing page*.
+
+![Figura 2. Landing responsive móvil](../imagenes/tfg-2026-04-24/04-landing-mobile.png)
+
+**Figura 3.** Panel PMPro con los niveles de membresía configurados.
+
+![Figura 3. Niveles de membresía en PMPro](../imagenes/tfg-2026-04-24/05-pmpro-niveles.png)
+
+**Figura 4.** Evento de pago confirmado en Stripe en modo *test*.
+
+![Figura 4. Evento confirmado en Stripe](../imagenes/tfg-2026-04-24/06-stripe-evento-confirmado.png)
+
+**Figura 5.** Tabla `wp_pmpro_memberships_users` con membresía activa tras un pago de prueba.
+
+![Figura 5. Membresías activas en base de datos](../imagenes/tfg-2026-04-24/07-membresias-activas-db.png)
+
+**Figura 6.** Biblioteca privada accesible tras login y membresía activa.
+
+![Figura 6. Biblioteca privada logueada](../imagenes/tfg-2026-04-24/10-biblioteca-logueada.png)
+
+El resto de capturas obtenidas durante la validación se reservaron como
+material de apoyo para la exposición oral y no se incorporan al cuerpo del
+documento para mantener la memoria dentro de la extensión recomendada.
 
 ---
 
@@ -913,8 +932,8 @@ Tres aprendizajes destacan por encima del resto:
   https://dev.mysql.com/doc/
 - Krug, S. (2014). *Don't Make Me Think, Revisited: A Common Sense
   Approach to Web Usability*. New Riders.
-- Material interno de planificación del proyecto Seramor (Notion, Canva,
-  Pinterest).
+- Material de planificación e identidad visual facilitado para el proyecto
+  Seramor (Notion, Canva y Pinterest).
 
 ---
 
@@ -922,55 +941,23 @@ Tres aprendizajes destacan por encima del resto:
 
 ### 8.1 Anexo técnico — Repositorios del proyecto
 
-El proyecto se organiza en **dos repositorios separados**, cada uno con su
-entorno local de trabajo y su remoto correspondiente en GitHub. Esta
-separación permite versionar y desplegar el sitio sin mezclar el código
-de construcción (*builder*) con la aplicación WordPress final.
+La solución se organizó en dos repositorios complementarios para mantener
+separadas la automatización de construcción y la instalación WordPress
+desplegable.
 
-#### Repositorio 1 — Builder (este documento vive aquí)
+#### Repositorio 1 — Builder
 
-- **GitHub remoto:** https://github.com/candelaagallegoo/seramor_builder
+- **Repositorio en GitHub:** https://github.com/candelaagallegoo/seramor_builder
 - **Ruta local:** `C:\Users\cande\Desktop\PROGRAMACION\WEBSITE_BUILDER_WORKSPACE`
 - **Contenido:** scripts PHP/PowerShell que construyen las páginas,
-  configuran Astra y PMPro, suben imágenes y arrancan el listener de
-  Stripe; documentación del proyecto (este TFG, plan maestro, DER,
-  integraciones).
-- **Función:** acta como entorno de trabajo y herramienta de generación.
-  No se despliega al servidor.
+  configuran Astra y PMPro, suben imágenes y preparan integraciones y
+  despliegues.
+- **Función:** centralizar la automatización y la documentación técnica
+  del proyecto.
 
-Estructura del repositorio:
+#### Repositorio 2 — Website
 
-```
-docs/
-  plans/plan-maestro.md
-  der-seramor-mermaid.md
-  integraciones.md
-  stripe-local-y-server.md
-  link.md
-  entrega_proyecto.md   (este documento)
-scripts/
-  build-landing-v6.php
-  build-programa.php
-  build-consejo.php
-  build-consejo-privado.php
-  build-contact.php
-  configure-astra.php
-  configure-astra-v2.php
-  configure-pmpro.php
-  configure-menu.php
-  catalog-images.php
-  inject-css.php
-  upload-images.ps1
-  extract-svg-images.ps1
-  start-stripe-listener.ps1
-  print-pmpro-stripe-webhook.php
-backups/
-  (dumps SQL y empaquetados de uploads)
-```
-
-#### Repositorio 2 — Website (instalación WordPress)
-
-- **GitHub remoto:** https://github.com/candelaagallegoo/serarmor_website
+- **Repositorio en GitHub:** https://github.com/candelaagallegoo/serarmor_website
 - **Ruta local:** `C:\xampp\htdocs\seramor`
 - **Contenido:** instalación completa de WordPress 6.9.4, tema Astra,
   plugins (PMPro, Stripe), el *mu-plugin* propio `seramor-site-runtime.php` y
@@ -978,134 +965,25 @@ backups/
 - **Función:** es la aplicación real que se ejecuta sobre XAMPP en local
   y se despliega al VPS de producción por SCP/SSH.
 
-### 8.2 Anexo de código
+### 8.2 Anexo técnico resumido
 
-Fragmentos representativos del código del proyecto. El código completo
-está versionado en los repositorios indicados en el Anexo 8.1.
+El soporte técnico del proyecto se articula sobre tres piezas principales:
 
-#### 8.2.1 Mu-plugin: reescritura de imágenes por clase `wp-image-{ID}`
+- Un conjunto de scripts PHP y PowerShell para construir páginas,
+  configurar Astra y preparar el despliegue.
+- Un *mu-plugin* propio (`seramor-site-runtime.php`) encargado de la
+  portabilidad de imágenes y enlaces entre local y producción.
+- Un procedimiento de despliegue reproducible basado en dump SQL,
+  empaquetado de `uploads` y copia segura al VPS remoto.
 
-Extracto de `wp-content/mu-plugins/seramor-site-runtime.php`. Garantiza que el
-mismo HTML funcione en local y producción sin reemplazos masivos en BD.
+Los fragmentos completos de código y los comandos operativos quedan
+documentados en los repositorios técnicos del proyecto y se omiten aquí
+para no penalizar innecesariamente la extensión de la memoria.
 
-```php
-add_filter( 'the_content', function ( $content ) {
-    if ( ! is_string( $content ) || $content === '' ) {
-        return $content;
-    }
-    return preg_replace_callback(
-        '/<img\b([^>]*?)class="([^"]*\bwp-image-(\d+)\b[^"]*)"([^>]*)>/i',
-        function ( $m ) {
-            $attachment_id = (int) $m[3];
-            $real_url = wp_get_attachment_url( $attachment_id );
-            if ( ! $real_url ) {
-                return $m[0];
-            }
-            $tag = $m[0];
-            // Sustituye el atributo src por la URL real del entorno activo.
-            $tag = preg_replace(
-                '/\bsrc="[^"]*"/i',
-                'src="' . esc_url( $real_url ) . '"',
-                $tag
-            );
-            return $tag;
-        },
-        $content
-    );
-}, 20 );
-
-// Sustituye el placeholder __HOME__ por la URL base del entorno.
-add_filter( 'the_content', function ( $content ) {
-    return str_replace( '__HOME__', untrailingslashit( home_url() ), $content );
-}, 21 );
-```
-
-#### 8.2.2 Construcción de página con bloques Gutenberg desde PHP
-
-Patrón común usado en los scripts `build-*.php`. El contenido queda
-representado como comentarios Gutenberg (`<!-- wp:... -->`) que WordPress
-interpreta como bloques nativos.
-
-```php
-$blocks  = '<!-- wp:cover {"url":"__HOME__/wp-content/uploads/hero.jpg"} -->';
-$blocks .= '<div class="wp-block-cover">';
-$blocks .= '  <!-- wp:heading {"level":1} -->';
-$blocks .= '  <h1>Seramor — Círculo de mujeres</h1>';
-$blocks .= '  <!-- /wp:heading -->';
-$blocks .= '</div>';
-$blocks .= '<!-- /wp:cover -->';
-
-wp_update_post( [
-    'ID'           => 10,              // Landing page
-    'post_content' => $blocks,
-    'post_status'  => 'publish',
-] );
-```
-
-#### 8.2.3 Despliegue: empaquetado de aplicación y dump SQL
-
-Fragmento del guion de despliegue (ver Anexo 8.4 para la secuencia
-completa).
-
-```powershell
-# Volcado de la base de datos con transacción consistente.
-& "C:\xampp\mysql\bin\mysqldump.exe" -u root --single-transaction `
-  --default-character-set=utf8mb4 `
-  --result-file=.\backups\seramor.sql seramor
-
-# Empaquetado de uploads (imágenes y adjuntos).
-tar -czf .\backups\seramor-uploads.tar.gz -C C:\xampp\htdocs\seramor wp-content\uploads
-
-# Empaquetado de la aplicación excluyendo secretos y artefactos locales.
-tar -czf .\backups\seramor-app.tar.gz `
-    --exclude='.git' --exclude='.env*' --exclude='wp-config.php' `
-    --exclude='wp-content/uploads' --exclude='backups' `
-    -C C:\xampp\htdocs seramor
-```
-
-
-### 8.3 Anexo de planificación
-
-- Plan maestro con fases, IDs de páginas y estado real:
-  https://github.com/candelaagallegoo/seramor_builder/blob/main/docs/plans/plan-maestro.md
-- DER detallado en Mermaid:
-  https://github.com/candelaagallegoo/seramor_builder/blob/main/docs/der-seramor-mermaid.md
-- Documento de integración Stripe local y server:
-  https://github.com/candelaagallegoo/seramor_builder/blob/main/docs/stripe-local-y-server.md
-- Documento de integraciones (claves y webhooks):
-  https://github.com/candelaagallegoo/seramor_builder/blob/main/docs/integraciones.md
-
-### 8.4 Anexo de comandos clave
-
-**Generar dump local:**
-```powershell
-& "C:\xampp\mysql\bin\mysqldump.exe" -u root --single-transaction `
-  --default-character-set=utf8mb4 `
-  --result-file=.\backups\seramor.sql seramor
-```
-
-**Listener Stripe en local:**
-```powershell
-stripe listen --forward-to `
-  "https://localhost/seramor/wp-admin/admin-ajax.php?action=stripe_webhook"
-```
-
-**Despliegue (resumen):**
-```powershell
-scp .\backups\seramor.sql .\backups\seramor-uploads.tar.gz `
-    .\backups\seramor-app.tar.gz cande@51.222.86.254:/tmp/
-ssh cande@51.222.86.254 "tar -xzf /tmp/seramor-app.tar.gz `
-    -C /var/www/cande/public_html"
-ssh cande@51.222.86.254 "cat /tmp/seramor.sql | `
-    mysql -h localhost -u cande_user -p'***' cande_wp"
-ssh cande@51.222.86.254 "tar -xzf /tmp/seramor-uploads.tar.gz `
-    -C /var/www/cande/public_html"
-```
-
-### 8.5 Aviso sobre credenciales
+### 8.3 Aviso sobre credenciales
 
 Todas las credenciales del proyecto (base de datos, SSH, claves de
-Stripe) se gestionan en archivos `.env.local` y `.env.server`
-**fuera del repositorio Git**, conforme a buenas prácticas de seguridad
-(OWASP A05: *Security Misconfiguration*). En este documento solo se
-referencian de forma genérica.
+Stripe) se gestionan en archivos `.env.local` y `.env.server`, separados
+del código fuente conforme a buenas prácticas de seguridad
+(OWASP A05: *Security Misconfiguration*). Por seguridad, no se incluyen
+valores reales.

@@ -398,6 +398,89 @@
 				"--path=c:\\xampp\\htdocs\\seramor"
 			],
 			"isBackground": false
+		},
+		{
+			"label": "Stripe Listen Capture",
+			"type": "shell",
+			"command": "C:\\Users\\cande\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Stripe.StripeCli_Microsoft.Winget.Source_8wekyb3d8bbwe\\stripe.exe",
+			"args": [
+				"listen",
+				"--api-key",
+				"${env:STRIPE_TEST_API_KEY}",
+				"--forward-to",
+				"https://localhost/seramor/wp-admin/admin-ajax.php?action=stripe_webhook"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Export entrega proyecto DOCX",
+			"type": "shell",
+			"command": "C:\\Users\\cande\\AppData\\Local\\Microsoft\\WinGet\\Packages\\JohnMacFarlane.Pandoc_Microsoft.Winget.Source_8wekyb3d8bbwe\\pandoc-3.9.0.2\\pandoc.exe",
+			"args": [
+				"docs\\entrega_proyecto.rendered.md",
+				"-o",
+				"docs\\entrega_proyecto.docx",
+				"--resource-path=.;docs;imagenes"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Export entrega proyecto DOCX fixed",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Set-Location 'c:\\Users\\cande\\Desktop\\PROGRAMACION\\WEBSITE_BUILDER_WORKSPACE\\docs'; & 'C:\\Users\\cande\\AppData\\Local\\Microsoft\\WinGet\\Packages\\JohnMacFarlane.Pandoc_Microsoft.Winget.Source_8wekyb3d8bbwe\\pandoc-3.9.0.2\\pandoc.exe' 'entrega_proyecto.rendered.md' -o 'entrega_proyecto.docx' --resource-path='.;..\\imagenes'"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Export entrega proyecto DOCX via cmd",
+			"type": "shell",
+			"command": "cmd.exe",
+			"args": [
+				"/d",
+				"/c",
+				"cd /d c:\\Users\\cande\\Desktop\\PROGRAMACION\\WEBSITE_BUILDER_WORKSPACE\\docs & \"C:\\Users\\cande\\AppData\\Local\\Microsoft\\WinGet\\Packages\\JohnMacFarlane.Pandoc_Microsoft.Winget.Source_8wekyb3d8bbwe\\pandoc-3.9.0.2\\pandoc.exe\" entrega_proyecto.rendered.md -o entrega_proyecto.docx --resource-path=.;..\\imagenes"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Export entrega proyecto DOCX reduced",
+			"type": "shell",
+			"command": "cmd.exe",
+			"args": [
+				"/d",
+				"/c",
+				"cd /d c:\\Users\\cande\\Desktop\\PROGRAMACION\\WEBSITE_BUILDER_WORKSPACE\\docs & \"C:\\Users\\cande\\AppData\\Local\\Microsoft\\WinGet\\Packages\\JohnMacFarlane.Pandoc_Microsoft.Winget.Source_8wekyb3d8bbwe\\pandoc-3.9.0.2\\pandoc.exe\" entrega_proyecto.rendered.md -o entrega_proyecto.docx --resource-path=.;..\\imagenes"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Export entrega proyecto DOCX final trimmed",
+			"type": "shell",
+			"command": "cmd.exe",
+			"args": [
+				"/d",
+				"/c",
+				"cd /d c:\\Users\\cande\\Desktop\\PROGRAMACION\\WEBSITE_BUILDER_WORKSPACE\\docs & \"C:\\Users\\cande\\AppData\\Local\\Microsoft\\WinGet\\Packages\\JohnMacFarlane.Pandoc_Microsoft.Winget.Source_8wekyb3d8bbwe\\pandoc-3.9.0.2\\pandoc.exe\" entrega_proyecto.rendered.md -o entrega_proyecto.docx --resource-path=.;..\\imagenes"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Format entrega proyecto DOCX direct",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"c:\\Users\\cande\\Desktop\\PROGRAMACION\\WEBSITE_BUILDER_WORKSPACE\\scripts\\format-entrega-docx.ps1"
+			],
+			"isBackground": false
 		}
 	]
 }

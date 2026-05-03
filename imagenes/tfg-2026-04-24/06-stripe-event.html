@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Figura 6 - Evento confirmado en Stripe</title>
+  <style>
+    :root {
+      --bg: #f6f0e6;
+      --ink: #1f2a1c;
+      --muted: #5b6457;
+      --card: #fffdfa;
+      --line: #d9cdbd;
+      --accent: #1f6fb2;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #fbf7f1 0%, var(--bg) 100%);
+    }
+    .card {
+      max-width: 1120px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: 0 18px 50px rgba(41, 35, 28, 0.12);
+    }
+    .eyebrow {
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: 36px;
+      line-height: 1.15;
+    }
+    p {
+      margin: 0 0 20px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .item {
+      background: #fcfaf6;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px 18px;
+    }
+    .label {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .value {
+      font-size: 18px;
+      font-weight: 700;
+      word-break: break-word;
+    }
+    pre {
+      margin: 0;
+      padding: 22px;
+      background: #161b22;
+      color: #dce6f2;
+      border-radius: 18px;
+      overflow: auto;
+      font-size: 14px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="eyebrow">Figura 6 · Stripe test</div>
+    <h1>Evento de pago confirmado recuperado desde Stripe</h1>
+    <p>El dashboard web no tenia una sesion iniciada en el navegador, asi que la evidencia se obtuvo directamente desde la API de Stripe en modo test usando la clave del proyecto. El evento corresponde al pago de prueba completado para Consejo de Diosas.</p>
+    <div class="grid">
+      <div class="item"><span class="label">Event ID</span><span class="value">evt_3TPRGfJuhfEkLRax0JECKQ0y</span></div>
+      <div class="item"><span class="label">Tipo</span><span class="value">payment_intent.succeeded</span></div>
+      <div class="item"><span class="label">Payment Intent</span><span class="value">pi_3TPRGfJuhfEkLRax00ef7Tol</span></div>
+      <div class="item"><span class="label">Estado</span><span class="value">succeeded</span></div>
+      <div class="item"><span class="label">Importe</span><span class="value">39.00 EUR</span></div>
+      <div class="item"><span class="label">Tarjeta</span><span class="value">Visa terminada en 4242</span></div>
+      <div class="item"><span class="label">Cliente</span><span class="value">tfg.captura+1776966055436@example.com</span></div>
+      <div class="item"><span class="label">Producto</span><span class="value">Consejo de Diosas · suscripcion mensual</span></div>
+    </div>
+    <pre>{
+  "id": "evt_3TPRGfJuhfEkLRax0JECKQ0y",
+  "type": "payment_intent.succeeded",
+  "livemode": false,
+  "created": 1776966146,
+  "payment_intent": "pi_3TPRGfJuhfEkLRax00ef7Tol",
+  "status": "succeeded",
+  "amount": 3900,
+  "currency": "eur",
+  "description": "Order #7044958C83, (tfg.captura+1776966055436@example.com)",
+  "customer": "cus_UODgJWD3EnPE4m",
+  "payment_method": "pm_1TPRGdJuhfEkLRaxAqSA0EFX",
+  "last4": "4242"
+}</pre>
+  </div>
+</body>
+</html>

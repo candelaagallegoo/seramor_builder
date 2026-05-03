@@ -1,0 +1,71 @@
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - banner [ref=e6]:
+      - generic [ref=e8]:
+        - link "Volver a Candela Gallego" [ref=e9] [cursor=pointer]:
+          - /url: https://candela-tfg.purenet.work/checkout/?pmpro_level=1
+          - generic [ref=e11]:
+            - img [ref=e12]
+            - generic [ref=e14]: Atrás
+            - generic [ref=e16]
+        - generic [ref=e21]: Entorno de prueba
+    - generic [ref=e22]:
+      - generic [ref=e24]:
+        - heading "Suscribirse a Consejo de Diosas" [level=2] [ref=e25]
+        - generic [ref=e27]:
+          - generic [ref=e31]:
+            - generic [ref=e32]: 818.419,57 IDR
+            - generic [ref=e35]
+          - group "Elige una divisa:" [ref=e37]:
+            - generic [ref=e38]
+      - list [ref=e59]:
+        - listitem [ref=e60]:
+          - generic [ref=e62]:
+            - generic [ref=e66]: Consejo de Diosas
+            - generic [ref=e70]: facturación mensual
+            - generic [ref=e74]: 818.419,57 IDR
+  - generic [ref=e76]:
+    - main [ref=e77]:
+      - generic [ref=e80]:
+        - generic [ref=e81]:
+          - iframe [ref=e87]:
+            - button "Pagar con Link" [ref=f25e8] [cursor=pointer]:
+              - generic [ref=f25e9]:
+                - generic [ref=f25e10]:
+                  - text: Pagar con
+                  - img [ref=f25e11]
+                - generic [ref=f25e14]:
+                  - img [ref=f25e15]
+                  - generic [ref=f25e22]: "0000"
+          - generic [ref=e88]:
+            - separator [ref=e89]
+            - paragraph [ref=e90]: O
+        - heading "Información de contacto" [level=2] [ref=e91]
+      - generic [ref=e95]:
+        - generic [ref=e96]:
+          - generic [ref=e103]:
+            - generic [ref=e104]: Correo electrónico
+            - generic [ref=e107]: tfg.captura+1776966055436@example.com
+          - heading "Método de pago" [level=2] [ref=e109]
+        - generic [ref=e110]:
+          - list [ref=e111]:
+            - listitem [ref=e116]
+          - generic [ref=e200]:
+            - checkbox "Guarda mis datos para un proceso de compra más rápido" [ref=e202] [cursor=pointer]
+            - generic [ref=e203]
+        - generic [ref=e210]:
+          - button "Suscribirse" [ref=e213] [cursor=pointer]:
+            - generic
+            - img [ref=e221]
+            - img [ref=e226]
+          - generic [ref=e232]: Al suscribirte, autorizas a Candela Gallego a cobrarte en IDR al tipo de cambio mostrado o al tipo de cambio en el momento de la facturación, según las condiciones, hasta que lo canceles.
+    - contentinfo [ref=e234]:
+      - link "Powered by Stripe" [ref=e236] [cursor=pointer]:
+        - /url: https://stripe.com
+        - generic [ref=e237]:
+          - text: Powered by
+          - img "Stripe" [ref=e239]
+      - link "Condiciones" [ref=e242] [cursor=pointer]:
+        - /url: https://stripe.com/legal/end-users
+      - link "Privacidad" [ref=e243] [cursor=pointer]:
+        - /url: https://stripe.com/privacy

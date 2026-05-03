@@ -1,0 +1,59 @@
+- generic [active] [ref=e1]:
+  - link "Ir al contenido" [ref=e2] [cursor=pointer]:
+    - /url: "#content"
+  - generic [ref=e3]:
+    - main [ref=e7]:
+      - article [ref=e8]:
+        - generic [ref=e9]:
+          - generic [ref=e10]:
+            - navigation [ref=e12]
+            - generic [ref=e18]
+          - generic [ref=e24]:
+            - generic [ref=e25]
+            - generic [ref=e30]
+            - generic [ref=e35]
+          - generic [ref=e41]:
+            - generic [ref=e42]
+            - img "Helena" [ref=e46]
+          - generic [ref=e49]:
+            - generic [ref=e50]
+            - generic [ref=e63]
+          - generic [ref=e70]:
+            - heading "Testimonios" [level=2] [ref=e71]
+            - generic [ref=e72]
+    - region "Footer de Seramor" [ref=e90]:
+      - generic [ref=e91]:
+        - generic [ref=e92]:
+          - link "Ir a la landing de Seramor" [ref=e93] [cursor=pointer]:
+            - /url: https://candela-tfg.purenet.work/
+            - generic [ref=e94]: Seramor
+          - paragraph [ref=e95]:
+            - text: Circulo de mujeres online.
+            - text: Sanar, crecer y crear juntas.
+        - generic [ref=e96]:
+          - heading "Explorar" [level=4] [ref=e97]
+          - list [ref=e98]:
+            - listitem [ref=e99]
+            - listitem [ref=e101]
+            - listitem [ref=e103]
+            - listitem [ref=e105]
+        - generic [ref=e107]:
+          - heading "Acceso" [level=4] [ref=e108]
+          - list [ref=e109]:
+            - listitem [ref=e110]
+            - listitem [ref=e112]
+            - listitem [ref=e114]
+        - generic [ref=e116]:
+          - heading "Comunidad" [level=4] [ref=e117]
+          - list [ref=e118]:
+            - listitem [ref=e119]
+            - listitem [ref=e121]
+          - paragraph [ref=e123]: Online · Espanol
+      - generic [ref=e124]:
+        - paragraph [ref=e125]: © 2026 Seramor · Hecho con intencion en circulo
+        - paragraph [ref=e126]:
+          - link "Politica de privacidad" [ref=e127] [cursor=pointer]:
+            - /url: https://candela-tfg.purenet.work/politica-privacidad/
+          - text: ·
+          - link "Contacto" [ref=e128] [cursor=pointer]:
+            - /url: https://candela-tfg.purenet.work/contacta-con-nosotras/

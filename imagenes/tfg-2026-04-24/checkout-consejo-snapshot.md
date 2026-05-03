@@ -1,0 +1,71 @@
+- generic [active] [ref=e1]:
+  - link "Ir al contenido" [ref=e2] [cursor=pointer]:
+    - /url: "#content"
+  - generic [ref=e3]:
+    - region "Seramor" [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - link "Volver al inicio" [ref=e7] [cursor=pointer]:
+            - /url: https://candela-tfg.purenet.work/
+            - text: ⌂
+          - link "Ir a la landing de Seramor" [ref=e8] [cursor=pointer]:
+            - /url: https://candela-tfg.purenet.work/
+            - generic [ref=e9]: Seramor
+        - navigation "Navegacion principal de Seramor" [ref=e10]:
+          - link "Programa 3 meses" [ref=e11] [cursor=pointer]:
+            - /url: https://candela-tfg.purenet.work/programa-de-3-meses/
+          - link "Consejo de Diosas" [ref=e12] [cursor=pointer]:
+            - /url: https://candela-tfg.purenet.work/plataforma-de-contenido-por-suscripcion/
+          - link "Sobre Seramor" [ref=e13] [cursor=pointer]:
+            - /url: https://candela-tfg.purenet.work/sobre-seramor/
+        - generic [ref=e14]:
+          - link "Inicia sesion" [ref=e15] [cursor=pointer]:
+            - /url: https://candela-tfg.purenet.work/login/
+          - link "Registrate" [ref=e16] [cursor=pointer]:
+            - /url: https://candela-tfg.purenet.work/membresias/
+    - main [ref=e20]:
+      - article [ref=e21]:
+        - heading "Registro" [level=1] [ref=e23]
+        - generic [ref=e27]:
+          - generic [ref=e28]:
+            - heading "Información de membresía" [level=2] [ref=e29]
+            - generic [ref=e30]
+          - group [ref=e39]:
+            - generic [ref=e40]
+          - button "Enviar y pagar" [ref=e78] [cursor=pointer]
+    - region "Footer de Seramor" [ref=e79]:
+      - generic [ref=e80]:
+        - generic [ref=e81]:
+          - link "Ir a la landing de Seramor" [ref=e82] [cursor=pointer]:
+            - /url: https://candela-tfg.purenet.work/
+            - generic [ref=e83]: Seramor
+          - paragraph [ref=e84]:
+            - text: Circulo de mujeres online.
+            - text: Sanar, crecer y crear juntas.
+        - generic [ref=e85]:
+          - heading "Explorar" [level=4] [ref=e86]
+          - list [ref=e87]:
+            - listitem [ref=e88]
+            - listitem [ref=e90]
+            - listitem [ref=e92]
+            - listitem [ref=e94]
+        - generic [ref=e96]:
+          - heading "Acceso" [level=4] [ref=e97]
+          - list [ref=e98]:
+            - listitem [ref=e99]
+            - listitem [ref=e101]
+            - listitem [ref=e103]
+        - generic [ref=e105]:
+          - heading "Comunidad" [level=4] [ref=e106]
+          - list [ref=e107]:
+            - listitem [ref=e108]
+            - listitem [ref=e110]
+          - paragraph [ref=e112]: Online · Espanol
+      - generic [ref=e113]:
+        - paragraph [ref=e114]: © 2026 Seramor · Hecho con intencion en circulo
+        - paragraph [ref=e115]:
+          - link "Politica de privacidad" [ref=e116] [cursor=pointer]:
+            - /url: https://candela-tfg.purenet.work/politica-privacidad/
+          - text: ·
+          - link "Contacto" [ref=e117] [cursor=pointer]:
+            - /url: https://candela-tfg.purenet.work/contacta-con-nosotras/

@@ -1,0 +1,6 @@
+- generic [active] [ref=e1]:
+  - link "Ir al contenido" [ref=e2] [cursor=pointer]:
+    - /url: "#content"
+  - generic [ref=e3]:
+    - main [ref=e7]
+    - region "Footer de Seramor" [ref=e90]

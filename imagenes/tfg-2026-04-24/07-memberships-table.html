@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Figura 7 - Membresias activas</title>
+  <style>
+    :root {
+      --bg: #f4efe7;
+      --card: #fffdfa;
+      --ink: #1f251e;
+      --muted: #5d665c;
+      --line: #d8d0c4;
+      --head: #e8efe4;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 34px;
+      font-family: Georgia, serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #faf7f2 0%, var(--bg) 100%);
+    }
+    .card {
+      max-width: 1180px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 18px 48px rgba(37, 33, 28, 0.12);
+    }
+    .eyebrow { font-size: 13px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--muted); }
+    h1 { margin: 10px 0 12px; font-size: 34px; }
+    p { margin: 0 0 18px; font-size: 18px; line-height: 1.6; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 18px;
+      font-size: 16px;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 12px 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--head);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .ok { font-weight: 700; color: #2e6c2f; }
+    .muted { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="eyebrow">Figura 7 · MySQL local</div>
+    <h1>Tabla <code>wp_pmpro_memberships_users</code> con membresia activa</h1>
+    <p>Consulta lanzada sobre la base local <span class="muted">seramor</span> despues de la prueba de pago. Se observa la fila activa del usuario de prueba y, debajo, los pedidos recientes en <code>wp_pmpro_membership_orders</code>.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>user_id</th>
+          <th>membership_id</th>
+          <th>status</th>
+          <th>startdate</th>
+          <th>enddate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2</td>
+          <td>2</td>
+          <td>3</td>
+          <td class="ok">active</td>
+          <td>2026-04-23 15:03:14</td>
+          <td>2026-07-23 23:59:59</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>1</td>
+          <td class="ok">active</td>
+          <td>2026-04-23 15:03:14</td>
+          <td>0000-00-00 00:00:00</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead>
+        <tr>
+          <th>order id</th>
+          <th>user_id</th>
+          <th>membership_id</th>
+          <th>status</th>
+          <th>gateway</th>
+          <th>payment_transaction_id</th>
+          <th>subscription_transaction_id</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>9</td>
+          <td>3</td>
+          <td>1</td>
+          <td>token</td>
+          <td>stripe</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>2</td>
+          <td>2</td>
+          <td>token</td>
+          <td>stripe</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>2</td>
+          <td>1</td>
+          <td class="ok">success</td>
+          <td>stripe</td>
+          <td>in_1TPMmqJuhfEkLRaxGO3RvCHC</td>
+          <td>sub_1TPMmsJuhfEkLRaxUI3bkD8e</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>2</td>
+          <td>3</td>
+          <td class="ok">success</td>
+          <td>stripe</td>
+          <td>in_1TPMk7JuhfEkLRaxVYV1Lz1A</td>
+          <td>sub_1TPMk9JuhfEkLRaxFVtUUBoS</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

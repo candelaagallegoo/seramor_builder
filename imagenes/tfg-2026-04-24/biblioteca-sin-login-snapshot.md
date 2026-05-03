@@ -1,0 +1,53 @@
+- generic [active] [ref=e1]:
+  - link "Ir al contenido" [ref=e2] [cursor=pointer]:
+    - /url: "#content"
+  - generic [ref=e3]:
+    - region "Seramor" [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - link "Volver al inicio" [ref=e7] [cursor=pointer]:
+            - /url: https://candela-tfg.purenet.work/
+          - link "Ir a la landing de Seramor" [ref=e8] [cursor=pointer]:
+            - /url: https://candela-tfg.purenet.work/
+        - navigation "Navegacion principal de Seramor" [ref=e10]:
+          - link "Programa 3 meses" [ref=e11] [cursor=pointer]:
+            - /url: https://candela-tfg.purenet.work/programa-de-3-meses/
+          - link "Consejo de Diosas" [ref=e12] [cursor=pointer]:
+            - /url: https://candela-tfg.purenet.work/plataforma-de-contenido-por-suscripcion/
+          - link "Sobre Seramor" [ref=e13] [cursor=pointer]:
+            - /url: https://candela-tfg.purenet.work/sobre-seramor/
+        - generic [ref=e14]:
+          - link "Inicia sesion" [ref=e15] [cursor=pointer]:
+            - /url: https://candela-tfg.purenet.work/login/
+          - link "Registrate" [ref=e16] [cursor=pointer]:
+            - /url: https://candela-tfg.purenet.work/membresias/
+    - main [ref=e20]:
+      - article [ref=e21]:
+        - generic [ref=e24]:
+          - heading "Membresía obligatoria de Consejo de Diosas" [level=2] [ref=e25]
+          - generic [ref=e29]
+          - generic [ref=e33]
+    - region "Footer de Seramor" [ref=e35]:
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - link "Ir a la landing de Seramor" [ref=e38] [cursor=pointer]:
+            - /url: https://candela-tfg.purenet.work/
+          - paragraph [ref=e40]
+        - generic [ref=e41]:
+          - heading "Explorar" [level=4] [ref=e42]
+          - list [ref=e43]
+        - generic [ref=e52]:
+          - heading "Acceso" [level=4] [ref=e53]
+          - list [ref=e54]
+        - generic [ref=e61]:
+          - heading "Comunidad" [level=4] [ref=e62]
+          - list [ref=e63]
+          - paragraph [ref=e68]: Online · Espanol
+      - generic [ref=e69]:
+        - paragraph [ref=e70]: © 2026 Seramor · Hecho con intencion en circulo
+        - paragraph [ref=e71]:
+          - link "Politica de privacidad" [ref=e72] [cursor=pointer]:
+            - /url: https://candela-tfg.purenet.work/politica-privacidad/
+          - text: ·
+          - link "Contacto" [ref=e73] [cursor=pointer]:
+            - /url: https://candela-tfg.purenet.work/contacta-con-nosotras/

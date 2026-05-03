@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Figura 9 - HTTPS publico</title>
+  <style>
+    :root {
+      --bg: #eef5ef;
+      --card: #ffffff;
+      --ink: #213224;
+      --muted: #58705d;
+      --line: #cdddcf;
+      --ok: #2f7d32;
+    }
+    body {
+      margin: 0;
+      padding: 36px;
+      font-family: Georgia, serif;
+      background: linear-gradient(180deg, #f7fbf7 0%, var(--bg) 100%);
+      color: var(--ink);
+    }
+    .card {
+      max-width: 1140px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 16px 48px rgba(33, 50, 36, 0.12);
+    }
+    h1 { margin: 0 0 12px; font-size: 34px; }
+    p { margin: 0 0 20px; font-size: 18px; line-height: 1.6; }
+    .url {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 12px 16px;
+      border-radius: 14px;
+      background: #f5faf5;
+      border: 1px solid var(--line);
+      color: var(--ok);
+      font-weight: 700;
+      font-size: 20px;
+    }
+    pre {
+      margin: 0;
+      padding: 22px;
+      background: #151a17;
+      color: #deeadf;
+      border-radius: 18px;
+      white-space: pre-wrap;
+      line-height: 1.65;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Figura 9 · Sitio publico servido por HTTPS</h1>
+    <p>Comprobacion tecnica del dominio remoto con respuesta <strong>HTTP/1.1 200 OK</strong> sobre el puerto 443. La peticion se realizo contra la URL publica del proyecto.</p>
+    <div class="url">https://candela-tfg.purenet.work/</div>
+    <pre>* Host candela-tfg.purenet.work:443 was resolved.
+* IPv4: 51.222.86.254
+* Trying 51.222.86.254:443...
+* schannel: disabled automatic use of client certificate
+* ALPN: server accepted http/1.1
+* Established connection to candela-tfg.purenet.work (51.222.86.254 port 443)
+&gt; HEAD / HTTP/1.1
+&gt; Host: candela-tfg.purenet.work
+&gt; User-Agent: curl/8.18.0
+
+&lt; HTTP/1.1 200 OK
+&lt; Date: Thu, 23 Apr 2026 17:56:42 GMT
+&lt; Server: Apache/2.4.62 (Ubuntu)
+&lt; Set-Cookie: pmpro_visit=1; path=/; secure; HttpOnly
+&lt; Link: &lt;https://candela-tfg.purenet.work/wp-json/&gt;; rel="https://api.w.org/"
+&lt; Content-Type: text/html; charset=UTF-8</pre>
+  </div>
+</body>
+</html>
