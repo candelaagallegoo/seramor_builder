@@ -241,6 +241,8 @@ $result = wp_update_post([
 if ( is_wp_error( $result ) ) {
     WP_CLI::error( 'Error: ' . $result->get_error_message() );
 } else {
+  update_post_meta( 10, 'site-sidebar-layout', 'no-sidebar' );
+  update_post_meta( 10, 'site-content-layout', 'page-builder' );
   update_post_meta( 10, 'ast-global-header-display', 'disabled' );
   update_post_meta( 10, 'ast-main-header-display', 'disabled' );
   delete_post_meta( 10, 'footer-sml-layout' );

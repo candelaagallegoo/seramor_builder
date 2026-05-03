@@ -1002,5 +1002,11 @@ if ( is_wp_error( $result ) ) {
     WP_CLI::error( $result->get_error_message() );
 }
 
+update_post_meta( 14, 'site-sidebar-layout', 'no-sidebar' );
+update_post_meta( 14, 'site-content-layout', 'page-builder' );
+update_post_meta( 14, 'site-post-title', 'disabled' );
+update_post_meta( 14, 'ast-breadcrumbs-content', 'disabled' );
+update_post_meta( 14, 'ast-featured-img', 'disabled' );
+
 WP_CLI::success( 'Consejo de Diosas publicado. Post ID: 14' );
 WP_CLI::line( 'URL: ' . get_permalink( 14 ) );

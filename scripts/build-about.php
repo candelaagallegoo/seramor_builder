@@ -541,6 +541,8 @@ if ( is_wp_error( $result ) ) {
 update_post_meta( 20, 'site-post-title', 'disabled' );
 update_post_meta( 20, 'ast-breadcrumbs-content', 'disabled' );
 update_post_meta( 20, 'ast-featured-img', 'disabled' );
+update_post_meta( 20, 'site-sidebar-layout', 'no-sidebar' );
+update_post_meta( 20, 'site-content-layout', 'page-builder' );
 
 WP_CLI::success( 'Pagina Sobre Seramor publicada. Post ID: 20' );
 WP_CLI::line( 'URL: ' . get_permalink( 20 ) );

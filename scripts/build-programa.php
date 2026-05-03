@@ -718,5 +718,11 @@ if ( is_wp_error( $result ) ) {
   WP_CLI::error( $message );
 }
 
+update_post_meta( 17, 'site-sidebar-layout', 'no-sidebar' );
+update_post_meta( 17, 'site-content-layout', 'page-builder' );
+update_post_meta( 17, 'site-post-title', 'disabled' );
+update_post_meta( 17, 'ast-breadcrumbs-content', 'disabled' );
+update_post_meta( 17, 'ast-featured-img', 'disabled' );
+
 WP_CLI::success( 'Programa de 3 meses publicado. Post ID: 17' );
 WP_CLI::line( 'URL: ' . get_permalink( 17 ) );

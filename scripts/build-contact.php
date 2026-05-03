@@ -103,6 +103,8 @@ if ( is_wp_error( $result ) ) {
 update_post_meta( 22, 'site-post-title', 'disabled' );
 update_post_meta( 22, 'ast-breadcrumbs-content', 'disabled' );
 update_post_meta( 22, 'ast-featured-img', 'disabled' );
+update_post_meta( 22, 'site-sidebar-layout', 'no-sidebar' );
+update_post_meta( 22, 'site-content-layout', 'page-builder' );
 
 WP_CLI::success( 'Pagina de contacto publicada. Post ID: 22' );
 WP_CLI::line( 'URL: ' . get_permalink( 22 ) );
