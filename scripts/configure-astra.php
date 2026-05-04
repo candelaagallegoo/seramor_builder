@@ -149,7 +149,7 @@ $astra_settings['footer-link-h-color'] = '#ffffff';
 
 // Footer copyright text
 $astra_settings['footer-sml-layout'] = 'footer-sml-layout-1';
-$astra_settings['footer-sml-section-1'] = '© 2026 Seramor — Círculo de Mujeres Online';
+$astra_settings['footer-sml-section-1'] = '© 2026 Seramor — Círculo de Mujeres Online &nbsp;·&nbsp; <a href="mailto:hola@seramor.com">hola@seramor.com</a> &nbsp;·&nbsp; <a href="https://instagram.com/helena.seramor" target="_blank" rel="noopener">@helena.seramor</a> &nbsp;·&nbsp; <a href="https://wa.me/34610210629" target="_blank" rel="noopener">WhatsApp</a>';
 
 // =============================================
 // 8. BUTTONS — Global

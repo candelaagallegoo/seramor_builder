@@ -119,17 +119,17 @@ function seramor_build_lesson_content( $title, $kicker, $summary, $focus_points,
     $embed_url   = 'https://www.youtube-nocookie.com/embed/' . rawurlencode( $video['youtube_id'] ) . '?rel=0';
     $video_title = ! empty( $video['title'] ) ? $video['title'] : $title;
     $video_markup = '<div class="seramor-video-shell is-live"><div class="seramor-youtube-frame"><iframe src="' . esc_url( $embed_url ) . '" title="' . esc_attr( $video_title ) . '" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></div>';
-    $video_copy   = esc_html( 'Este módulo ya tiene su video incrustado desde YouTube para que puedas reproducirlo dentro del área privada sin salir del sitio.' );
-    $resource_copy = esc_html( 'Debajo del video puedes sumar PDF, journaling, audios o notas privadas. El embed ya está listo; solo queda complementar cada módulo con recursos descargables.' );
+    $video_copy   = esc_html( 'En este módulo encontrarás la clase principal para recorrerla con calma, volver a verla cuando lo necesites y acompañar tu proceso dentro del Consejo.' );
+    $resource_copy = esc_html( 'En esta sección encontrarás materiales de apoyo, apuntes y recursos complementarios para integrar lo trabajado en la clase.' );
   } else {
-    $video_markup = '<div class="seramor-video-shell"><div class="seramor-video-placeholder"><span>Este módulo se apoya en recursos vivos, notas y encuentros. Puedes seguir ampliándolo desde el canal privado de Seramor.</span></div></div>';
-    $video_copy   = esc_html( 'Este espacio puede crecer con recursos, eventos y materiales de integración aunque no dependa de un video central.' );
-    $resource_copy = esc_html( 'Úsalo para plantillas, enlaces, notas de clase o el calendario de encuentros del Consejo.' );
+    $video_markup = '<div class="seramor-video-shell"><div class="seramor-video-placeholder"><span>Este espacio reúne contenidos de apoyo y materiales de integración para acompañarte dentro del Consejo.</span></div></div>';
+    $video_copy   = esc_html( 'Este espacio reúne contenidos de apoyo y materiales de integración para acompañarte más allá de una sola clase.' );
+    $resource_copy = esc_html( 'Aquí se organizan los recursos, las referencias y la información útil para que tengas todo a mano dentro del Consejo.' );
   }
 
   $channel_cta = '';
   if ( ! empty( $channel_url ) ) {
-    $channel_cta = '<p class="seramor-mini-note">Canal base: <a href="' . esc_url( $channel_url ) . '" target="_blank" rel="noopener">abrir Seramor Circle en YouTube</a>.</p>';
+    $channel_cta = '<p class="seramor-mini-note">Si lo prefieres, también puedes acceder a los videos desde el canal privado del Consejo en YouTube.</p>';
   }
 
     return <<<HTML
@@ -310,39 +310,82 @@ foreach ( $child_pages as $slug => $child_page ) {
 $library_content = <<<HTML
 <!-- wp:html -->
 <div class="seramor-shell seramor-private-library">
-  <section class="seramor-membership-hero seramor-private-hero">
+  <style>
+    .seramor-private-library .alignfull {
+      margin-left: calc(50% - 50vw) !important;
+      width: 100vw !important;
+      max-width: 100vw !important;
+    }
+    .seramor-private-library {
+      background: #853916;
+      color: #f8ecdc;
+      overflow: hidden;
+    }
+    .seramor-private-library .seramor-membership-hero {
+      background: #853916;
+      padding: 0 0 16px;
+    }
+    .seramor-private-library .seramor-private-hero {
+      min-height: 0;
+    }
+    .seramor-private-library .seramor-membership-hero::after {
+      display: none;
+    }
+    .seramor-private-library .seramor-membership-copy {
+      max-width: 900px;
+      padding: 16px 28px 10px;
+      text-align: center;
+    }
+    .seramor-private-library .seramor-membership-copy .seramor-title {
+      max-width: none;
+      font-size: clamp(42px, 7vw, 64px);
+      letter-spacing: 0.5px;
+    }
+    .seramor-private-library .seramor-membership-copy .seramor-text {
+      max-width: 720px;
+      margin: 18px auto 0;
+      font-size: 21px;
+      line-height: 1.45;
+      color: #fffaf4;
+    }
+    .seramor-private-library .seramor-pill-row {
+      justify-content: center;
+      margin-top: 26px;
+    }
+  </style>
+  <section class="seramor-membership-hero seramor-private-hero alignfull">
     <div class="seramor-membership-copy">
       <p class="seramor-kicker">Área privada</p>
       <h1 class="seramor-title">Biblioteca Consejo de Diosas</h1>
-      <p class="seramor-text">Aquí está la versión privada del Consejo: una biblioteca viva con clases, prácticas, recursos y espacios de integración para recorrer a tu ritmo.</p>
+      <p class="seramor-text">Este es tu espacio privado dentro del Consejo de Diosas: un lugar para volver a las clases, las prácticas y los recursos que acompañan tu proceso, a tu ritmo y en tu propio tiempo.</p>
       <div class="seramor-pill-row">
         <span class="seramor-pill">Videos incrustados</span>
-        <span class="seramor-pill">Thumbnails propios</span>
+        <span class="seramor-pill">Prácticas y recursos</span>
         <span class="seramor-pill">Acceso solo para miembros</span>
       </div>
     </div>
   </section>
 
-  <section class="seramor-section seramor-soft">
+  <section class="seramor-section seramor-soft alignfull">
     <div class="seramor-section-inner seramor-grid-2 is-reversed">
       <div>
-        <p class="seramor-kicker">Cómo funciona</p>
-        <h2 class="seramor-title">Una pública para vender y una privada para consumir</h2>
-        <p class="seramor-text" style="margin-top:22px">La página pública presenta el Consejo, muestra contenido borroso y lleva al checkout o al login. Esta página privada es la biblioteca real: aquí cada módulo puede llevar su thumbnail, su embed de YouTube y sus recursos descargables.</p>
-        <p class="seramor-text" style="margin-top:18px">Para cada lección, lo más limpio es: thumbnail en WordPress para la tarjeta + video oculto en YouTube incrustado dentro de la página del módulo.</p>
+        <p class="seramor-kicker">Tu espacio dentro del Consejo</p>
+        <h2 class="seramor-title">Un lugar pensado para acompañarte de verdad</h2>
+        <p class="seramor-text" style="margin-top:22px">Aquí encontrarás reunidas las clases, las prácticas y los materiales del Consejo para que puedas volver a ellos cada vez que lo necesites.</p>
+        <p class="seramor-text" style="margin-top:18px">Cada módulo abre una parte distinta del camino: sanar, reconectar contigo, cuidar tu energía y sostener una vida más alineada con lo que eres.</p>
       </div>
       <div class="seramor-image-card"><img class="wp-image-$HERO_ID" src="$HERO" alt="Biblioteca privada Consejo de Diosas"/></div>
     </div>
   </section>
 
-  <section class="seramor-section">
+  <section class="seramor-section alignfull">
     <div class="seramor-section-inner">
       <p class="seramor-kicker">Biblioteca</p>
       <h2 class="seramor-title">Tus espacios dentro del Consejo</h2>
-      <p class="seramor-text" style="max-width:760px;margin:18px auto 0;text-align:center">Las clases principales ya quedan incrustadas dentro de los módulos privados. Los espacios de integración y encuentros siguen creciendo contigo dentro de la membresía.</p>
+      <p class="seramor-text" style="max-width:760px;margin:18px auto 0;text-align:center">Aquí tienes reunidos los distintos espacios del Consejo para acompañar tu proceso con profundidad: clases, prácticas, integración y recursos para volver a ti una y otra vez.</p>
       <div class="seramor-private-grid">$cards</div>
       <div class="seramor-cta-row" style="justify-content:center;margin-top:26px">
-        <a class="seramor-btn is-secondary" href="$channel_url" target="_blank" rel="noopener">Abrir canal base en YouTube</a>
+        <a class="seramor-btn is-secondary" href="$channel_url" target="_blank" rel="noopener">Ver videos del Consejo</a>
       </div>
     </div>
   </section>
@@ -360,9 +403,20 @@ wp_update_post(
     )
 );
 
+update_post_meta( $library_page_id, 'site-sidebar-layout', 'no-sidebar' );
+update_post_meta( $library_page_id, 'site-content-layout', 'page-builder' );
+update_post_meta( $library_page_id, 'site-post-title', 'disabled' );
+update_post_meta( $library_page_id, 'ast-breadcrumbs-content', 'disabled' );
+update_post_meta( $library_page_id, 'ast-featured-img', 'disabled' );
+
 $restricted_page_ids = array_merge( array( $library_page_id ), wp_list_pluck( $child_pages, 'id' ) );
 
 foreach ( $restricted_page_ids as $restricted_page_id ) {
+  update_post_meta( (int) $restricted_page_id, 'site-sidebar-layout', 'no-sidebar' );
+    update_post_meta( (int) $restricted_page_id, 'site-content-layout', 'page-builder' );
+  update_post_meta( (int) $restricted_page_id, 'site-post-title', 'disabled' );
+  update_post_meta( (int) $restricted_page_id, 'ast-breadcrumbs-content', 'disabled' );
+  update_post_meta( (int) $restricted_page_id, 'ast-featured-img', 'disabled' );
     pmpro_update_post_level_restrictions( (int) $restricted_page_id, array( $consejo_level_id ) );
 }
 

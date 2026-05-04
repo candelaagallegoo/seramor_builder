@@ -642,7 +642,7 @@ $content = <<<HTML
           <div class="seramor-cta-row"><a class="seramor-btn is-secondary" href="$checkout_tres_pagos">Prefiero 3 pagos</a></div>
         </article>
       </div>
-      <p class="seramor-mini-note">Las plazas se abren en grupo reducido. Ahora el checkout está listo en test; cuando pasemos a live solo cambiaremos las claves del entorno.</p>
+      <p class="seramor-mini-note">Las plazas se abren en grupo reducido para cuidar la profundidad del proceso y el acompañamiento de cada mujer.</p>
     </div>
   </section>
 
@@ -676,7 +676,7 @@ $content = <<<HTML
       <div>
         <p class="seramor-kicker">Cierre</p>
         <h2 class="seramor-title">Si ya lo sientes, no lo vuelvas a postergar</h2>
-        <p class="seramor-text" style="margin-top:22px">Este programa está hecho para mujeres que quieren una transformación real, no solo inspiración de paso. El pago ya entra por checkout y el siguiente bloque será cerrar acceso privado y automatizaciones.</p>
+        <p class="seramor-text" style="margin-top:22px">Este programa es para mujeres que están listas para dejar de postergarse y sostener una transformación real. Si sientes que este es tu momento, aquí tienes un espacio para sanar, ordenar tu energía y dar pasos concretos hacia la vida que deseas crear.</p>
         <div class="seramor-cta-row">
           <a class="seramor-btn" href="$checkout_pago_unico">Reservar mi plaza</a>
         </div>
